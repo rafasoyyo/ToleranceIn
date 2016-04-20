@@ -1,0 +1,1559 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"cos",
+				"console"
+			],
+			[
+				"ng-i",
+				"ng-init"
+			],
+			[
+				"pro",
+				"product"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"b",
+				"background"
+			],
+			[
+				"po",
+				"pos-r	position: relative;"
+			],
+			[
+				"local",
+				"localhost	(app.coffee)"
+			],
+			[
+				"res",
+				"result"
+			],
+			[
+				"save",
+				"saveFile	(files.coffee)"
+			],
+			[
+				"prodcu",
+				"productos	(index.coffee)"
+			],
+			[
+				"use",
+				"user"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"user",
+				"username"
+			],
+			[
+				"re",
+				"results"
+			],
+			[
+				"a",
+				"authenticate"
+			],
+			[
+				"usr",
+				"users	(userModel.js)"
+			],
+			[
+				"bord",
+				"border-right"
+			],
+			[
+				"mar",
+				"mr-a	margin-right: auto;"
+			],
+			[
+				"get",
+				"getElementsByClassName	(html5.image.preview.js)"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"back",
+				"background-image"
+			],
+			[
+				"seac",
+				"search"
+			],
+			[
+				"ex",
+				"exports	(app.coffee)"
+			],
+			[
+				"fin",
+				"finder"
+			],
+			[
+				"recoem",
+				"recomendado	(form_producto.jade)"
+			],
+			[
+				"descrip",
+				"descripción	(form_producto.jade)"
+			],
+			[
+				"bor",
+				"border-bottom"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"borde",
+				"border-radius"
+			],
+			[
+				"out",
+				"outline"
+			],
+			[
+				"dark",
+				"darken(color, 10%)"
+			],
+			[
+				"ligh",
+				"lighten(color, 10%)"
+			],
+			[
+				"rg",
+				"rgba(r,g,b,a)"
+			],
+			[
+				"box",
+				"box-shadow"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"f",
+				"fixed	(header.jade)"
+			],
+			[
+				"con",
+				"container	(header.jade)"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"he",
+				"height"
+			],
+			[
+				"req",
+				"require"
+			],
+			[
+				"app",
+				"append"
+			],
+			[
+				"vie",
+				"views	(app.js)"
+			],
+			[
+				"new",
+				"newtarea"
+			],
+			[
+				"date",
+				"dateEdition"
+			],
+			[
+				"has",
+				"hash"
+			],
+			[
+				"pass",
+				"password	(User.js)"
+			],
+			[
+				"models",
+				"model('user_schema	(user_controller.coffee)"
+			],
+			[
+				"max",
+				"max-height"
+			],
+			[
+				"root",
+				"rootScope	\\$rootScope"
+			],
+			[
+				"lo",
+				"locale	\\$locale"
+			],
+			[
+				"enc",
+				"encryption"
+			],
+			[
+				"encr",
+				"encrypt"
+			],
+			[
+				"bio",
+				"biomarkers"
+			],
+			[
+				"idento",
+				"identificator"
+			],
+			[
+				"fil",
+				"filter"
+			],
+			[
+				"Quibim",
+				"Quibim-Precision"
+			],
+			[
+				"z-",
+				"z-index"
+			],
+			[
+				"imae",
+				"images"
+			],
+			[
+				"bg",
+				"background-color"
+			],
+			[
+				"z",
+				"z-index"
+			],
+			[
+				"DELETE",
+				"delete"
+			],
+			[
+				"state",
+				"stateParams"
+			],
+			[
+				"ng",
+				"ng-show"
+			],
+			[
+				"wi",
+				"width"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "views/item/producto.jade",
+			"settings":
+			{
+				"buffer_size": 3279,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "coffee/angular/factory/factory.coffee",
+			"settings":
+			{
+				"buffer_size": 1806,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/quibim/Precision/Frontend/sources/angular/factory/factory.coffee",
+			"settings":
+			{
+				"buffer_size": 12807,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "package.json",
+			"settings":
+			{
+				"buffer_size": 1216,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "utils/files.coffee",
+			"settings":
+			{
+				"buffer_size": 887,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "coffee/angular/controllers/item-Ctrl.coffee",
+			"settings":
+			{
+				"buffer_size": 887,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 104.0,
+		"last_filter": "Package Control: install",
+		"selected_items":
+		[
+			[
+				"Package Control: install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: instal",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: INSTALL",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 464.0
+	},
+	"console":
+	{
+		"height": 162.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Pruebas/ToleranceIn",
+		"/C/Pruebas/ToleranceIn/coffee",
+		"/C/Pruebas/ToleranceIn/coffee/angular",
+		"/C/Pruebas/ToleranceIn/coffee/angular/controllers",
+		"/C/Pruebas/ToleranceIn/coffee/angular/factory",
+		"/C/Pruebas/ToleranceIn/coffee/scripts",
+		"/C/Pruebas/ToleranceIn/less",
+		"/C/Pruebas/ToleranceIn/less/components",
+		"/C/Pruebas/ToleranceIn/less/global",
+		"/C/Pruebas/ToleranceIn/less/pages",
+		"/C/Pruebas/ToleranceIn/models",
+		"/C/Pruebas/ToleranceIn/routes",
+		"/C/Pruebas/ToleranceIn/utils",
+		"/C/Pruebas/ToleranceIn/views",
+		"/C/Pruebas/ToleranceIn/views/creation",
+		"/C/Pruebas/ToleranceIn/views/home",
+		"/C/Pruebas/ToleranceIn/views/html",
+		"/C/Pruebas/ToleranceIn/views/item"
+	],
+	"file_history":
+	[
+		"/C/Pruebas/ToleranceIn/models/productoModel.coffee",
+		"/C/Pruebas/ToleranceIn/coffee/angular/factory/factory.coffee",
+		"/C/Pruebas/ToleranceIn/app.coffee",
+		"/C/Pruebas/ToleranceIn/less/global/variables.less",
+		"/C/Pruebas/ToleranceIn/less/pages/item.less",
+		"/C/Pruebas/ToleranceIn/views/item/header.jade",
+		"/C/Pruebas/ToleranceIn/views/home/header.jade",
+		"/C/Pruebas/ToleranceIn/less/components/buttons.less",
+		"/C/Pruebas/ToleranceIn/less/global/buttons-brd.less",
+		"/C/Pruebas/ToleranceIn/coffee/angular/app.coffee",
+		"/C/Pruebas/ToleranceIn/coffee/scripts/j_scripts.coffee",
+		"/C/Pruebas/ToleranceIn/routes/producto.coffee",
+		"/C/Pruebas/ToleranceIn/models/commentModel.coffee",
+		"/C/Pruebas/ToleranceIn/views/item/producto.jade",
+		"/C/Pruebas/ToleranceIn/coffee/angular/controllers/item-Ctrl.coffee",
+		"/C/Pruebas/ToleranceIn/models/lugarModel.coffee",
+		"/C/Pruebas/ToleranceIn/models/afeccionModel.coffee",
+		"/C/Pruebas/ToleranceIn/views/layout.jade",
+		"/C/Pruebas/ToleranceIn/coffee/angular/controllers/header-Crtl.coffee",
+		"/C/Pruebas/ToleranceIn/less/components/forms.less",
+		"/C/Pruebas/ToleranceIn/less/bootstrap/mixins/gradients.less",
+		"/C/Pruebas/ToleranceIn/less/components/header.less",
+		"/C/Pruebas/ToleranceIn/less/global/miscellaneous.less",
+		"/C/Pruebas/ToleranceIn/less/components/texts.less",
+		"/C/Pruebas/ToleranceIn/views/creation/form_producto.jade",
+		"/C/Pruebas/ToleranceIn/views/creation/form_afeccion.jade",
+		"/C/Pruebas/ToleranceIn/views/creation/form_comercio.jade",
+		"/C/Pruebas/ToleranceIn/less/style.less",
+		"/C/Pruebas/ToleranceIn/less/pages/profile.less",
+		"/C/Pruebas/ToleranceIn/less/components/logos.less",
+		"/C/Pruebas/ToleranceIn/less/bootstrap/mixins.less",
+		"/C/Pruebas/ToleranceIn/less/bootstrap/media.less",
+		"/C/Pruebas/ToleranceIn/routes/index.coffee",
+		"/C/Pruebas/ToleranceIn/models/finder.coffee",
+		"/C/Pruebas/ToleranceIn/views/creation/index.jade",
+		"/C/Pruebas/ToleranceIn/nodemon.json",
+		"/C/Pruebas/ToleranceIn/gruntfile.js",
+		"/C/Pruebas/ToleranceIn/package.json",
+		"/C/Pruebas/ToleranceIn/bin/www",
+		"/C/Pruebas/ToleranceIn/node_modules/nodemon/package.json",
+		"/C/Pruebas/ToleranceIn/node_modules/nodemon/bin/nodemon.js",
+		"/C/Pruebas/ToleranceIn/views/profile/index.jade",
+		"/C/Pruebas/ToleranceIn/views/profile/main.jade",
+		"/C/Pruebas/ToleranceIn/less/components/card.less",
+		"/C/Pruebas/ToleranceIn/views/html/cards.jade",
+		"/C/Pruebas/ToleranceIn/views/components/cards.jade",
+		"/C/Pruebas/ToleranceIn/routes/find.coffee",
+		"/C/Pruebas/ToleranceIn/utils/files.coffee",
+		"/C/Pruebas/ToleranceIn/views/profile/perfil.jade",
+		"/C/Pruebas/ToleranceIn/models/userModel.coffee",
+		"/C/Pruebas/ToleranceIn/routes/users.coffee",
+		"/C/Pruebas/ToleranceIn/utils/mailer.coffee",
+		"/C/Pruebas/ToleranceIn/config.json",
+		"/C/Pruebas/azureAccount/routes/account.coffee",
+		"/C/Pruebas/azureAccount/models/userModel.coffee",
+		"/C/Pruebas/azureAccount/app.coffee",
+		"/C/Users/Rafael/Documents/GitHub/CursoNODE/Proyect/app.coffee",
+		"/C/Pruebas/ToleranceIn/views/creation/main.jade",
+		"/C/Pruebas/ToleranceIn/public/javascripts/scripts.js",
+		"/C/Pruebas/ToleranceIn/public/templates/cards.html",
+		"/C/Pruebas/ToleranceIn/views/components/header.jade",
+		"/C/Pruebas/ToleranceIn/views/home/main.jade",
+		"/C/Pruebas/ToleranceIn/coffee/angular/controllers/home-Ctrl.coffee",
+		"/C/Pruebas/ToleranceIn/routes/creation.coffee",
+		"/C/Pruebas/ToleranceIn/coffee/angular/controllers/body-Ctrl.coffee",
+		"/C/Pruebas/ToleranceIn/views/html/loginModal.jade",
+		"/C/Pruebas/ToleranceIn/public/templates/loginModal.html",
+		"/C/Pruebas/ToleranceIn/public/templates/rafa.html",
+		"/C/Pruebas/ToleranceIn/views/producto/header.jade",
+		"/C/Pruebas/ToleranceIn/views/producto/view.jade",
+		"/C/Pruebas/ToleranceIn/tolerance.js",
+		"/C/Pruebas/ToleranceIn/coffee/angular/controllers/login-Ctrl.coffee",
+		"/C/Pruebas/ToleranceIn/views/producto/edit.jade",
+		"/C/Pruebas/ToleranceIn/routes/account.coffee",
+		"/C/Pruebas/ToleranceIn/util/mailer.coffee",
+		"/C/Pruebas/ToleranceIn/tolerance",
+		"/C/Pruebas/ToleranceIn/less/global/general.less",
+		"/C/Pruebas/ToleranceIn/less/global/fonts.less",
+		"/C/quibim/Precision/Frontend/sources/login/coffee/login.coffee",
+		"/C/quibim/Precision/Frontend/sources/login/templates/login.jade",
+		"/C/quibim/Precision/Frontend/sources/login/templates/login_form.jade",
+		"/C/Pruebas/ToleranceIn/public/javascripts/ng_scripts.js",
+		"/C/Pruebas/ToleranceIn/public/javascripts/scripts.min.js",
+		"/C/Pruebas/ToleranceIn/coffee/j_scripts.coffee",
+		"/C/Pruebas/ToleranceIn/public/javascripts/j_scripts.js",
+		"/C/Pruebas/ToleranceIn/coffee/ng_scripts.coffee",
+		"/C/Pruebas/ToleranceIn/public/javascripts/ng_scripts.min.js",
+		"/C/Pruebas/ToleranceIn/public/javascripts/ng_scripts.src.coffee",
+		"/C/quibim/Precision/Frontend/sources/less/components/texts.less",
+		"/C/Users/Rafael/Documents/GitHub/CursoNODE/TEMA6/ejercicios/app.js",
+		"/C/Pruebas/node-api-master/node-api-master/server.js",
+		"/C/Pruebas/ToleranceIn/less/components/modals.less",
+		"/C/Users/Rafael/Documents/GitHub/CursoNODE/TEMA7/ejercicioTema7/socket.js",
+		"/C/Users/Rafael/Documents/GitHub/CursoNODE/TEMA7/chat_/views/layout.jade",
+		"/C/Users/Rafael/Documents/GitHub/CursoNODE/TEMA7/chat_/package.json",
+		"/C/Users/Rafael/Documents/GitHub/CursoNODE/TEMA7/chat/package.json",
+		"/C/Users/Rafael/Documents/GitHub/CursoNODE/TEMA7/chat_/views/index.jade",
+		"/C/Users/Rafael/Documents/GitHub/CursoNODE/TEMA7/chat/views/layout.jade",
+		"/C/Users/Rafael/Documents/GitHub/CursoNODE/TEMA6/ejercicios/package.json",
+		"/C/Users/Rafael/Documents/GitHub/CursoNODE/TEMA6/ejercicios/gruntfile.js",
+		"/C/Users/Rafael/Documents/GitHub/CursoNODE/TEMA8/ToDoAPI/routes/index.js",
+		"/C/Users/Rafael/Documents/GitHub/CursoNODE/TEMA8/ToDoAPI/routes/users.js",
+		"/C/Pruebas/ToleranceIn/views/profile/items.jade",
+		"/C/Pruebas/ToleranceIn/views/home/content.jade",
+		"/C/Pruebas/ToleranceIn/views/home/index.jade",
+		"/C/Users/Rafael/Documents/GitHub/CursoNODE/TEMA5/ejercicio2/app.js",
+		"/C/Users/Rafael/Documents/GitHub/CursoNODE/TEMA5/ejercicio2/model/userModel.js",
+		"/C/Users/Rafael/Documents/GitHub/CursoNODE/TEMA5/ejercicio2/routes/users.js",
+		"/C/Users/Rafael/AppData/Local/Temp/Rar$DIa0.066/html5.image.preview.js",
+		"/C/Pruebas/ToleranceIn/public/javascripts/dropzone.js",
+		"/C/Pruebas/ToleranceIn/views/index.jade",
+		"/C/Pruebas/ToleranceIn/less/components/paddings.less",
+		"/C/Pruebas/Trials/routes/users.js",
+		"/C/Pruebas/Trials/routes/index.js",
+		"/C/Pruebas/Trials/model/tareaModel.js",
+		"/C/Pruebas/ToleranceIn/routes/searcher.coffee",
+		"/C/Pruebas/ToleranceIn/less/components/tabs.less",
+		"/C/Pruebas/ToleranceIn/less/bootstrap/buttons.less",
+		"/C/Pruebas/ToleranceIn/less/bootstrap/forms.less",
+		"/C/Users/Rafael/Documents/GitHub/CursoNODE/TEMA8/ToDoAPI/public/javascripts/main.js",
+		"/C/Users/Rafael/Documents/GitHub/CursoNODE/TEMA8/ToDoAPI/app.js",
+		"/C/Users/Rafael/Documents/GitHub/CursoNODE/TEMA8/ToDoAPI/gruntfile.js",
+		"/C/Users/Rafael/Documents/GitHub/CursoNODE/TEMA8/ToDoAPI/views/account.jade",
+		"/C/Users/Rafael/Documents/GitHub/CursoNODE/TEMA8/ToDoAPI/package.json",
+		"/C/Users/Rafael/Documents/GitHub/CursoNODE/TEMA8/ToDoAPI/views/error.jade",
+		"/C/Users/Rafael/Documents/GitHub/CursoNODE/TEMA8/ToDoAPI/views/edit.jade",
+		"/C/Users/Rafael/Documents/GitHub/CursoNODE/TEMA8/ToDoAPI/views/card.jade",
+		"/C/Users/Rafael/Documents/GitHub/CursoNODE/TEMA8/ToDoAPI/views/view.jade"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 138.0,
+		"where_history":
+		[
+			"C:\\Pruebas\\ToleranceIn\\less\\bootstrap",
+			"C:\\Pruebas\\ToleranceIn\\less",
+			"C:\\Pruebas\\ToleranceIn",
+			"C:\\Pruebas\\ToleranceIn\\less",
+			"C:\\Pruebas\\ToleranceIn\\less\\bootstrap",
+			"C:\\Users\\Rafael\\Documents\\GitHub\\CursoNODE\\Proyect",
+			"C:\\quibim\\Precision\\Frontend\\sources",
+			"D:\\Precision\\Backend\\biomarkerRestFul\\src\\ws",
+			"D:\\Precision\\Backend\\biomarkerRestFul",
+			"D:\\Precision\\Backend\\biomarkerRestFul\\src\\ws",
+			"D:\\Precision\\Backend",
+			"D:\\Precision\\Backend\\biomarkerRestFul\\WebContent",
+			"D:\\Precision\\Backend\\biomarkerRestFul\\src\\ws",
+			"D:\\Precision\\Backend\\biomarkerRestFul\\WebContent",
+			"D:\\Precision\\Frontend\\sources",
+			"D:\\Precision\\Backend",
+			"D:\\Precision",
+			"D:\\Precision\\Backend\\",
+			"D:\\Precision\\Backend\\biomarkerRestFul\\src\\ws",
+			"D:\\Precision\\Frontend\\sources",
+			"D:\\Precision\\sources",
+			"D:\\Precision\\dwv\\ext",
+			"D:\\Precision\\Frontend\\sources",
+			"D:\\Precision\\Backend\\biomarkerRestFul\\src\\ws",
+			"D:\\Precision\\Frontend\\sources",
+			"D:\\Precision",
+			"D:\\Precision\\Backend\\biomarkerRestFul\\src\\ws",
+			"D:\\Precision\\Frontend\\sources",
+			"D:\\Precision\\",
+			"D:\\Precision\\Backend\\biomarkerRestFul\\src\\ws",
+			"D:\\Precision\\Frontend\\sources\\",
+			"D:\\Precision\\Frontend\\sources\\less",
+			"D:\\Precision\\Frontend\\sources",
+			"D:\\Precision\\Frontend\\sources\\templates",
+			"D:\\Precision\\Frontend\\sources"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"gradient",
+			".btn.btn-default.square",
+			".pad-sm.iblock",
+			".pad-xs.iblock",
+			"iblock",
+			"vertical-ali",
+			"to restart at any time",
+			"async",
+			"eq.body.displayImage\n                    files.folderExistOrCreate(dir, -> \n                        uploadPhoto req, res, next \n                    )\n                else \n                    ne",
+			".pad-h-xs.iblock",
+			"previewImage",
+			"product.nombre",
+			"producto",
+			"isl",
+			"islogged",
+			"user",
+			"new_User",
+			"new_user",
+			"req.U",
+			"user",
+			"mongoose.Schema.Types",
+			"#forgot-password",
+			";",
+			"checkDirectorySync",
+			"imagePreview",
+			"widths",
+			"value",
+			"central",
+			"logo_alerg",
+			".active",
+			"active",
+			"red",
+			"   %",
+			"@c_param",
+			"green",
+			"button-variant",
+			"conso",
+			"usern",
+			"debu",
+			"sear",
+			"_",
+			"_id",
+			"bson",
+			"btn-imagina",
+			"tvshows",
+			"mon",
+			"debug",
+			"running",
+			"hre",
+			"onListening",
+			"set",
+			"MainCtrl",
+			"list",
+			"sma",
+			"new",
+			"cere",
+			"\\\"",
+			"if",
+			"sendMail",
+			"findby",
+			"3d",
+			"patientIdentificator",
+			"listResultRowJsonOut",
+			"SendMail.",
+			"SendMail-",
+			"SendMail()",
+			"sendMail.",
+			"SendMail()",
+			"mail",
+			"ç",
+			"mail",
+			"Reciba un cordial cordial saludo",
+			"url_password",
+			"biomarker",
+			"code",
+			".alert-dismissible",
+			"aña",
+			"Quibim-Precision guided tour",
+			"tour",
+			"invali",
+			"stateParams",
+			"'",
+			"alert",
+			"25%",
+			"root",
+			"set_region",
+			"sequences_fail",
+			"sequence_fail",
+			"communication",
+			"msg:",
+			"{msg:",
+			"save_secuence",
+			"Unable to delete",
+			"delete",
+			"Unable",
+			"entre",
+			"state",
+			"bioma",
+			"process",
+			"@size",
+			"plus",
+			"plud",
+			"report_pag",
+			"report_page",
+			"create",
+			"white",
+			"lst",
+			"field",
+			"data",
+			"xmlDropped",
+			"drop",
+			"biomarkers_create",
+			"biomarkers_create ",
+			"$filter",
+			"left_bar",
+			"left_bar ",
+			"communication",
+			"facto",
+			"position",
+			"sock",
+			"pt\" sr",
+			"></script>",
+			"<script ",
+			".js.js",
+			"sjcl.json.",
+			"sjcl.json.de",
+			"sjcl.json",
+			"dist_route"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			".btn.btn-block.btn-default.square",
+			".pad-md.iblock",
+			".pad-sm.iblock",
+			".pad-xs.iblock",
+			"item",
+			"user",
+			"req.u",
+			"User",
+			"Schema",
+			"",
+			"centrado",
+			"logo_alerg.central",
+			"black",
+			")",
+			"percentage(@c_param",
+			"blue",
+			"cyan",
+			"yellow",
+			"red",
+			"\"",
+			"pt\", sr",
+			")",
+			"script(",
+			".js",
+			"es",
+			"en",
+			"}",
+			"{",
+			"nick())",
+			"QPname.locale",
+			"listRegionJsonOut.identificator.toLowerCase()",
+			"(bm.listRegionJsonOut.identificator).toLowerCase()",
+			"RESULTADOS"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 4,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "views/item/producto.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3279,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "coffee/angular/factory/factory.coffee",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1806,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
+							],
+							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/C/quibim/Precision/Frontend/sources/angular/factory/factory.coffee",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 12807,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
+							],
+							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 390.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "package.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1216,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
+							],
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "utils/files.coffee",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 887,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content"
+							],
+							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "coffee/angular/controllers/item-Ctrl.coffee",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 887,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								157,
+								157
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/Better CoffeeScript/CoffeeScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 2.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 21.0
+	},
+	"input":
+	{
+		"height": 40.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "toleranceIn.sublime-project",
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"text",
+				"less\\components\\texts.less"
+			],
+			[
+				"grut",
+				"gruntfile.js"
+			],
+			[
+				"gene",
+				"less\\global\\general.less"
+			],
+			[
+				"header",
+				"views\\components\\header.jade"
+			],
+			[
+				"main",
+				"Precision\\Frontend\\sources\\angular\\controllers\\main-crtl.coffee"
+			],
+			[
+				"gulp",
+				"Precision\\gulpfile.js"
+			],
+			[
+				"bioma",
+				"sources\\script\\biomarcadores.coffee"
+			],
+			[
+				"conf",
+				"Precision\\Backend\\biomarkerRestFul\\WebContent\\config.xml"
+			],
+			[
+				"viewer",
+				"sources\\angular\\controllers\\viewer-header-ctrl.coffee"
+			],
+			[
+				"",
+				"Precision\\Frontend\\sources\\demo\\coffee\\factory.coffee"
+			],
+			[
+				"app",
+				"sources\\demo\\coffee\\app.coffee"
+			],
+			[
+				"fact",
+				"sources\\demo\\coffee\\factory.coffee"
+			],
+			[
+				"report",
+				"Precision\\Frontend\\sources\\templates\\report.jade"
+			],
+			[
+				"tour",
+				"sources\\demo\\coffee\\tour.coffee"
+			],
+			[
+				"hand",
+				"sources\\angular\\controllers\\handmadereport_Ctrl.coffee"
+			],
+			[
+				"repo",
+				"sources\\templates\\report.jade"
+			],
+			[
+				"varia",
+				"sources\\less\\global\\variables.less"
+			],
+			[
+				"stud",
+				"sources\\templates\\study.jade"
+			],
+			[
+				"te",
+				"sources\\script\\textos.coffee"
+			],
+			[
+				"biom",
+				"sources\\script\\unused\\biomarcadores.coffeee"
+			],
+			[
+				"login",
+				"sources\\login\\coffee\\login.coffee"
+			],
+			[
+				"unz",
+				"sources\\lib\\unzipper_worker.coffee"
+			],
+			[
+				"index",
+				"sources\\login\\index.jade"
+			],
+			[
+				"study",
+				"sources\\templates\\study.jade"
+			],
+			[
+				"mian",
+				"sources\\angular\\controllers\\main-crtl.coffee"
+			],
+			[
+				"index.j",
+				"sources\\demo\\index.jade"
+			],
+			[
+				"inde",
+				"sources\\login\\index.jade"
+			],
+			[
+				"ind",
+				"sources\\index.jade"
+			],
+			[
+				"modal",
+				"sources\\less\\components\\modals.less"
+			],
+			[
+				"gul",
+				"Precision\\gulpfile.js"
+			],
+			[
+				"packa",
+				"Precision\\package.json"
+			],
+			[
+				"stu",
+				"sources\\angular\\controllers\\study-ctrl.coffee"
+			],
+			[
+				"con",
+				"WebContent\\config.xml"
+			],
+			[
+				"lo",
+				"sources\\login\\coffee\\login.coffee"
+			],
+			[
+				"factory",
+				"sources\\angular\\factory\\factory.coffee"
+			],
+			[
+				"user",
+				"sources\\templates\\users.jade"
+			],
+			[
+				"user-c",
+				"sources\\angular\\controllers\\users-ctrl.coffee"
+			],
+			[
+				"mix",
+				"Precision\\Frontend\\sources\\less\\global\\mixins.less"
+			],
+			[
+				"form",
+				"sources\\less\\components\\forms.less"
+			],
+			[
+				"sett",
+				"sources\\angular\\controllers\\settings-ctrl.coffee"
+			],
+			[
+				"tex",
+				"sources\\script\\textos.coffee"
+			],
+			[
+				"cong",
+				"WebContent\\config.xml"
+			],
+			[
+				"config",
+				"Precision\\Backend\\biomarkerRestFul\\WebContent\\config.xml"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 733.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"D:\\landing\\landing.sublime-project"
+			]
+		],
+		"width": 570.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 223.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+		"max_columns": 2
+	}
+}

@@ -1,0 +1,17 @@
+extends index
+
+block content
+    main
+        .container
+            .col-xs-12.col-md-2
+                #profile-nav
+                    .btn-group-vertical
+                        a.btn.btn-default.square(href="/users/#{user.username}/all"         class="#{ pageName === 'Items'      ? 'active' : ''}") Mis añadidos
+                        a.btn.btn-default.square(href="/users/#{user.username}/favorites"   class="#{ pageName === 'Favoritos'  ? 'active' : ''}") Mis favoritos
+                        a.btn.btn-default.square(href="/users/#{user.username}/products"    class="#{ pageName === 'Productos'  ? 'active' : ''}") Mis productos
+                        a.btn.btn-default.square(href="/users/#{user.username}/places"      class="#{ pageName === 'Lugares'    ? 'active' : ''}") Mis lugares
+                        a.btn.btn-default.square(href="/users/#{user.username}/profile"     class="#{ pageName === 'Perfil'     ? 'active' : ''}") Perfil
+                        a.btn.btn-default.square(href="/account/logout") Salir
+                            
+
+            block profile

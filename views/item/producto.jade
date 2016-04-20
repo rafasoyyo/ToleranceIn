@@ -1,0 +1,73 @@
+extends ../layout
+
+
+block header
+    include header
+
+block content
+    .container(ng-controller="item-Ctrl")
+        .col-xs-12.col-md-4.pull-right
+            .pad-h-md.pad-v-xs.bg-info
+                .pad-xs
+                h4.bold.unmar.inline Autor:                
+                if item.autor.nombre != 'Anónimo'
+                    a.pad-xs.unmar.inline(href="/user/#{item.autor.nombre}") #{item.autor.nombre}
+                else
+                    .pad-xs.unmar.inline #{item.autor.nombre}
+
+        .col-xs-12.col-md-8
+            .row
+                h4.bold.unmar Descipción:
+                p.pad-xs #{item.descripcion}
+
+            if item.etiquetas.length
+                .row.btn-bloch 
+                    h4.bold.unmar Etiquetas:
+                    each tag in item.etiquetas
+                        .iblock.pad-xs
+                            button.btn.btn-info #{tag}
+            
+            .pad-v-sm
+            .row
+                h4.bold.unmar Comentarios:
+                .pad-xs
+
+            div.hidden(ng-init="clase= '#{item.clase}' ; ident= '#{item._id}' ")
+            div(ng-if="comments.length")
+                #comment-block
+                    div(ng-if="comments" ng-repeat="comment in comments | limitTo : limited ")                       
+                        .row.pad-v-xs.alert.alert-info
+                            .media.pad-xs
+                                .media-left
+                                    a
+                                        img.img-circle.bg-white(ng-src="{{comment.autor.image ? comment.autor.image : '/images/user.png' }}")
+                                .media-body
+                                    p.unmar {{comment.autor.username}} - {{comment.created | date : 'dd/MM/yyyy'}}
+                                     //- - #{moment(item.comentarios[c].created).format("DD/MM/YYYY")}
+                                    h4.media-heading(ng-bind="comment.mensaje")
+
+                    .text-center(ng-if="limited < comments.length")
+                        .btn.btn-info.pad-h-md(ng-click="see_comment()") 
+                            i.fa.fa-plus.txt-white.pad-h-xs
+                            span.txt-white See more
+
+                .pad-v-lg
+
+
+            .row
+                if user
+                    form#product_comment.form-tolerance(name="product_comment" ng-submit="post_comment('#{item.clase}', '#{item._id}')" novalidate)
+                        input.hidden(name="comment_id" ng-model="comment.id" ng-init="comment.id='#{item._id}'" value="#{item._id}")
+                        textarea.form-control(name="comment_comentario" ng-model="comment.comentario" rows="5" required)
+                        .pad-xs
+                        span.txt-error(style="position:absolute" ng-if="product_comment.$submitted && product_comment.comment_comentario.$error.required") No hay comentarios que guardar
+                        input.btn.btn-sm.btn-brd-infolight.pull-right(type="submit" value="Comentar")
+                else
+                    .bg-success.pad-md
+                        .text-center
+                            h3 Inicia sesion para añadir comentarios
+                            .btn.btn-brd-white.hover Inicia Sesión
+
+        .clearfix
+        .pad-huge
+        p #{item}

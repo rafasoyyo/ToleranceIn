@@ -1,0 +1,20 @@
+{
+  "restartable": "sr",
+  "ignore": [
+    ".git",
+    "node_modules/**/node_modules",
+    "db/**"
+  ],
+  "verbose": true,
+  "events": {
+    "restart": "osascript -e 'display notification \"App restarted due to:\n'$FILENAME'\" with title \"nodemon\"'"
+  },
+  "watch": [
+    "*.coffee",
+    "*.jade"
+  ],
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "ext": "js json"
+}
