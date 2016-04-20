@@ -24,13 +24,20 @@ tolerantApp.factory('$account', ['$resource', ($resource)->
 	# Registro de usuarios
 	# @namespace $account
 	# @restapi '/account/register'
-	# @param {Object} identification { username: username, email: email , password: password }
+	# @param {Object} register { username: username, email: email , password: password }
 	# @return {Boolean} reload
 	###
 	register: (data)->	$resource('/account/register').save(data).$promise
 
 	# info -> Comprueba la disponibilidad de nombre y email
-	# data -> Objeto: nombre, email
+	# data -> Objeto: nombre, email	
+	###
+	# Comprueba la disponibilidad de nombre y email
+	# @namespace $account
+	# @restapi '/account/available'
+	# @param {Object} available { name: nombre, email: email }
+	# @return {Boolean} available or not
+	###
 	available: (data)->	$resource('/account/available').save(data).$promise
 
 	# info -> Comprueba la disponibilidad de nombre y email

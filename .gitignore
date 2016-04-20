@@ -1,7 +1,7 @@
 #################
 ## Eclipse
 #################
-/doc
+
 /db
 /node_modules
 config.json
