@@ -2,8 +2,8 @@
 ## Eclipse
 #################
 
-/node_modules
-/db
+/todelete_node_modules
+/todelete_db
 config.json
 
 *.pydevproject
