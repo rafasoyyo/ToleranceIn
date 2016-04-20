@@ -1,7 +1,20 @@
+
+###
+# Node models
+# @namespace Node.models
+# @module afeccion
+# @see rafa
+###
+
 mongoose = require 'mongoose'
 Schema   = mongoose.Schema
 comentarioSchema = require './commentModel'
 
+###
+# afeccionModel
+# @memberOf afeccion
+# @method afeccionSchema
+###
 afeccionSchema = new Schema({
                             # index     : { unique : true }
                             clase       : { type : "string", default: "afeccion" }
@@ -20,6 +33,11 @@ afeccionSchema = new Schema({
                 }, {timestamps: true})
 
 
+###
+# afeccionModel
+# @memberOf afeccion
+# @method afeccionModel
+###
 afeccionModel = mongoose.model('afeccion', afeccionSchema)
 
 module.exports = afeccionModel

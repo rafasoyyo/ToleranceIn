@@ -1,8 +1,7 @@
 
 ###
 # Header controller
-# @memberOf Angular
-# @namespace Controller
+# @namespace Angular.Controller
 # @module header-Ctrl
 # @see rafa
 ###

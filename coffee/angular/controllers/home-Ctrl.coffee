@@ -1,8 +1,7 @@
 
 ###
 # Home controller
-# @page Angular
-# @namespace Controller
+# @namespace Angular.Controller
 # @module home-Ctrl
 ###
 

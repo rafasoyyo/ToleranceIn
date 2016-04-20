@@ -1,7 +1,12 @@
+###
+# App definition
+# @namespace Node
+# @module Node
+###
 
 ###
-# Header controller
-# @page NODE
+# @memberOf Node
+# @method app.definition
 ###
 
 express = require 'express'
