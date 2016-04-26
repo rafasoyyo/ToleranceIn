@@ -14,7 +14,9 @@
     </div></a>
   <div class="card__action">
     <div class="card__author"><img ng-src="{{ item.picture || '/images/user.png' }}" alt="user"/>
-      <div class="card__author-content"><span>by </span><a href="'/user/profile/' + item.autor.username" ng-bind="item.autor.username"></a></div>
+      <div class="card__author-content">
+        <div ng-if="item.autor.username"><span>by <a ng-if="item.autor.username != 'Anónimo'" href="/users/{{item.autor.username}}/profile" ng-bind="item.autor.username"></a><span ng-if="item.autor.username === 'Anónimo'" href="/users/{{item.autor.username}}/profile" ng-bind="item.autor.username"></span></span></div>
+      </div>
     </div>
   </div>
 </div>

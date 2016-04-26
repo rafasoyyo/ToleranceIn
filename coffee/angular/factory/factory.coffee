@@ -52,11 +52,20 @@ tolerantApp.factory('$items', ['$resource', ($resource)->
 	###
 	# Petición de todos los items: productos, lugares y afecciones
 	# @namespace $items
+	# @restapi '/find/all'
+	# @param {null}
+	# @return {Array} Lista de todos los elementos ordenados por número de visitas
+	###
+	get_all: (data)->	$resource('/elements/all')
+	
+	###
+	# Petición de todos los items: productos, lugares y afecciones
+	# @namespace $items
 	# @restapi '/product/all'
 	# @param {null}
 	# @return {Array} Lista de todos los productos ordenados por número de visitas
 	###
-	get_all: (data)->	$resource('/product/all').get().$promise
+	product_all: (data)->	$resource('/producto/all').get().$promise
 
 	###
 	# Petición de coemntarios
@@ -65,7 +74,7 @@ tolerantApp.factory('$items', ['$resource', ($resource)->
 	# @param {Object} 
 	# @return {Array} Lista de todos los comentarios de ese producto
 	###
-	product_comment_get: (data)->	$resource('/product/comment/' + data).get().$promise
+	product_comment_get: (data)->	$resource('/producto/comment/' + data).get().$promise
 	
 	###
 	# Envío de coemntarios
@@ -74,7 +83,7 @@ tolerantApp.factory('$items', ['$resource', ($resource)->
 	# @param {Object} 
 	# @return {Array} Lista de todos los comentarios de ese producto
 	###
-	product_comment_post: (data)->	$resource('/product/comment').save(data).$promise
+	product_comment_post: (data)->	$resource('/producto/comment').save(data).$promise
 
 	# info -> Registro de usuarios
 	# data -> Objeto: nombre, email y contraseña
@@ -89,3 +98,20 @@ tolerantApp.factory('$items', ['$resource', ($resource)->
 	# recover: (data)->	$resource('/account/recover').save(data).$promise
 
 ])
+
+tolerantApp.factory('$user', ['$resource', ($resource)->
+	
+	###
+	# Petición de todos los items: productos, lugares y afecciones
+	# @namespace $items
+	# @restapi '/find/all'
+	# @param {null}
+	# @return {Array} Lista de todos los elementos ordenados por número de visitas
+	###
+	save_fav: (data)-> $resource('/users/:id/save_fav', {id:'@id'}, data )
+
+])
+
+tolerantApp.factory('$shared', ->
+    return {finder: ''}
+)

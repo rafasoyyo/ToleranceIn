@@ -1,4 +1,18 @@
 ###
+# @memberOf Node
+# @method app.definition
+###
+
+###
+# Node utils
+# @namespace Node.utils
+# @module Mailer
+# @see rafa
+###
+
+
+
+###
 		HOW TO USE IT.
 
 		Configure:
@@ -47,8 +61,23 @@ transporter.verify (err, success) ->
 	if err
 		console.log colors.red('Nodemalier error: ', err)
 	return
-
-# PREPARE AND VALIDATE EMAIL LIST
+###
+# afeccionModel
+# @memberOf Mailer
+# @method afeccionSchema
+# @example
+		mailer(
+			{
+				to      : List or receivers. Can be string with one or more emais, array of emails or array or objects with a key 'email'
+				subject : Text for subject
+				template: Template name with extension. Can be jade or html
+				info    : Info to fill the templates. Can be an object or array of objects so each object will fill a different template.
+				text    : Plain text to send if HTML is not allowed or not supported.
+				custom  : Optional (true - false), default false. when to use array of info to fill
+			},
+			function(err, result){ callback }
+		)
+###
 get_receivers = (receivers, callback) ->
 	emails = []
 	valid = []

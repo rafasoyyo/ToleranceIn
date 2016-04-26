@@ -17,16 +17,27 @@ router.get '/', user.isAuthenticated , (req, res, next) ->
 
 
 # GET home page.
-router.get '/all', user.isAuthenticated , (req, res, next) ->
-    
-    finder.find_all_items (err, results)->
-        if err then return res.status(500).json(err)       
-        res.status(200).json({
-                                productos : results.producto
-                                afecciones: results.afeccion
-                                lugares   : results.lugar
-                                all       : results.all
-                            })
+router.route '/elements/all'
+    .get (req, res, next) ->
+        
+        finder.find_all_items (err, results)->
+            if err then return res.status(500).json(err)       
+            res.status(200).json({
+                                    productos : results.producto
+                                    afecciones: results.afeccion
+                                    lugares   : results.lugar
+                                    all       : results.all
+                                })
+    .post (req, res, next) ->
+        console.log req.body
+        finder.filter_all_items req.body.finder, (err, results)->
+            if err then return res.status(500).json(err)       
+            res.status(200).json({
+                                    productos : results.producto
+                                    afecciones: results.afeccion
+                                    lugares   : results.lugar
+                                    all       : results.all
+                                })
 
 
 # CREATION PAGES
@@ -34,7 +45,7 @@ router.route '/create'
     .get user.isAuthenticated, (req, res, next) ->
         
         res.render 'creation/index',
-            title   : 'Express'
+            title   : 'Creation - ToleranceIn'
             pageName: 'Creation'
             user    : req.user
 

@@ -1,12 +1,39 @@
+
+/*
+ * App definition
+ * @namespace Angular
+ * @module Angular
+ */
+
+/*
+ * @memberOf Angular
+ * @method app.definition
+ * @param {Array} Injections ['ngResource', 'ngSanitize', 'ngAnimate', 'ui.bootstrap']
+ */
 var tolerantApp;
 
 tolerantApp = angular.module('tolerantApp', ['ngResource', 'ngSanitize', 'ngAnimate', 'ui.bootstrap']);
 
 tolerantApp.controller('body-Ctrl', ['$scope', function($scope) {}]);
 
+
+/*
+ * Header controller
+ * @namespace Angular.Controller
+ * @module header-Ctrl
+ * @see rafa
+ */
 tolerantApp.controller('header-Ctrl', [
-  '$scope', '$uibModal', function($scope, $uibModal) {
-    return $scope.loginModal = function() {
+  '$scope', '$uibModal', '$shared', function($scope, $uibModal, $shared) {
+
+    /*
+    	 * Open login and register modal
+    	 * @memberOf header-Ctrl
+    	 * @method $scope.loginModal
+    	 * @param none
+    	 * @return none
+     */
+    $scope.loginModal = function() {
       var modalInstance;
       return modalInstance = $uibModal.open({
         animation: true,
@@ -16,36 +43,73 @@ tolerantApp.controller('header-Ctrl', [
         size: 'md'
       });
     };
+    return $scope.$shared = $shared;
   }
 ]);
 
+
+/*
+ * Home controller
+ * @namespace Angular.Controller
+ * @module home-Ctrl
+ */
 tolerantApp.controller('home-Ctrl', [
-  '$scope', '$items', function($scope, $items) {
-    $scope.get_all = function() {
-      return $items.get_all().then(function(res) {
-        console.log(res);
-        $scope.all = res.all;
-        $scope.productos = res.productos;
-        $scope.lugares = res.lugares;
-        return $scope.afecciones = res.afecciones;
-      }, function(err) {
-        return console.error(err);
-      });
+  '$scope', '$items', '$shared', function($scope, $items, $shared) {
+
+    /*
+     * Description
+     * @memberOf home-Ctrl
+     * @method $scope.get_all
+     * @param algo
+     * @param algo2
+     * @return algo2
+     * @returnprop algo2
+     */
+    $scope.get_all = function(param) {
+      if (param) {
+        $items.get_all().save(param).$promise.then(function(res) {
+          console.log(res);
+          $scope.all = res.all;
+          $scope.productos = res.productos;
+          $scope.lugares = res.lugares;
+          return $scope.afecciones = res.afecciones;
+        }, function(err) {
+          return console.error(err);
+        });
+      }
+      if (!param) {
+        return $items.get_all().get().$promise.then(function(res) {
+          console.log(res);
+          $scope.all = res.all;
+          $scope.productos = res.productos;
+          $scope.lugares = res.lugares;
+          return $scope.afecciones = res.afecciones;
+        }, function(err) {
+          return console.error(err);
+        });
+      }
     };
-    return $scope.get_all();
+    $scope.get_all();
+    $scope.$shared = $shared;
+    return $scope.$watchCollection('$shared', function(end, ini) {
+      console.log(end, ini);
+      if (end !== ini) {
+        return $scope.get_all(end);
+      }
+    });
   }
 ]);
 
 tolerantApp.controller('item-Ctrl', [
-  '$scope', '$filter', '$timeout', '$items', function($scope, $filter, $timeout, $items) {
-    var iteartor;
+  '$scope', '$filter', '$timeout', '$user', '$items', function($scope, $filter, $timeout, $user, $items) {
+    var $fav, iteartor;
     iteartor = 5;
     $scope.limited = iteartor;
     $scope.see_comment = function() {
       return $scope.limited = $scope.limited + iteartor;
     };
     $scope.get_comment = function() {
-      if ($scope.clase === 'product') {
+      if ($scope.clase === 'producto') {
         return $items.product_comment_get($scope.ident).then(function(res) {
           return $scope.comments = $filter('orderBy')(res.comentarios, 'created', true);
         }, function(error) {
@@ -54,7 +118,7 @@ tolerantApp.controller('item-Ctrl', [
       }
     };
     $scope.post_comment = function() {
-      if ($scope.clase === 'product') {
+      if ($scope.clase === 'producto') {
         return $items.product_comment_post($scope.comment).then(function(res) {
           console.log(res);
           $scope.product_comment.$setPristine();
@@ -65,7 +129,26 @@ tolerantApp.controller('item-Ctrl', [
         });
       }
     };
-    return $timeout($scope.get_comment, 1);
+    $timeout($scope.get_comment, 1);
+    $fav = angular.element('#fav').find('i');
+    return $scope.save_fav = function(id, data) {
+      return $user.save_fav().save({
+        id: id
+      }, {
+        item: data,
+        clase: $scope.clase
+      }).$promise.then(function(res) {
+        console.log(res);
+        if (res.option === "removed") {
+          return $fav.removeClass('fa-star').addClass('fa-star-o');
+        }
+        if (res.option === "added") {
+          return $fav.removeClass('fa-star-o').addClass('fa-star');
+        }
+      }, function(err) {
+        return console.error(err);
+      });
+    };
   }
 ]);
 
@@ -175,15 +258,49 @@ tolerantApp.controller('loginModal-Ctrl', [
 tolerantApp.factory('$account', [
   '$resource', function($resource) {
     return {
+
+      /*
+      	 * Logueo de usuarios
+      	 * @namespace $account
+      	 * @restapi '/account/login'
+      	 * @resterror {0/Backend error} Respuesta en caso de error inprevisto o sin identificar
+      	 * @resterror {1/not exist} Respuesta en caso de que el usuario no exista
+      	 * @param {Object} identification { username: username or email , password: password }
+      	 * @return {null} reload
+       */
       login: function(data) {
         return $resource('/account/login').save(data).$promise;
       },
+
+      /*
+      	 * DesLogueo de usuarios	
+      	 * @namespace $account
+      	 * @restapi '/account/logout'
+      	 * @param {null} 
+      	 * @return {null} reload
+       */
       logout: function(data) {
         return $resource('/account/logout').get().$promise;
       },
+
+      /*
+      	 * Registro de usuarios
+      	 * @namespace $account
+      	 * @restapi '/account/register'
+      	 * @param {Object} register { username: username, email: email , password: password }
+      	 * @return {Boolean} reload
+       */
       register: function(data) {
         return $resource('/account/register').save(data).$promise;
       },
+
+      /*
+      	 * Comprueba la disponibilidad de nombre y email
+      	 * @namespace $account
+      	 * @restapi '/account/available'
+      	 * @param {Object} available { name: nombre, email: email }
+      	 * @return {Boolean} available or not
+       */
       available: function(data) {
         return $resource('/account/available').save(data).$promise;
       },
@@ -197,15 +314,76 @@ tolerantApp.factory('$account', [
 tolerantApp.factory('$items', [
   '$resource', function($resource) {
     return {
+
+      /*
+      	 * Petición de todos los items: productos, lugares y afecciones
+      	 * @namespace $items
+      	 * @restapi '/find/all'
+      	 * @param {null}
+      	 * @return {Array} Lista de todos los elementos ordenados por número de visitas
+       */
       get_all: function(data) {
-        return $resource('/all').get().$promise;
+        return $resource('/elements/all');
       },
+
+      /*
+      	 * Petición de todos los items: productos, lugares y afecciones
+      	 * @namespace $items
+      	 * @restapi '/product/all'
+      	 * @param {null}
+      	 * @return {Array} Lista de todos los productos ordenados por número de visitas
+       */
+      product_all: function(data) {
+        return $resource('/producto/all').get().$promise;
+      },
+
+      /*
+      	 * Petición de coemntarios
+      	 * @namespace $items
+      	 * @restapi '/product/comment'
+      	 * @param {Object} 
+      	 * @return {Array} Lista de todos los comentarios de ese producto
+       */
       product_comment_get: function(data) {
-        return $resource('/product/comment/' + data).get().$promise;
+        return $resource('/producto/comment/' + data).get().$promise;
       },
+
+      /*
+      	 * Envío de coemntarios
+      	 * @namespace $items
+      	 * @restapi '/product/comment'
+      	 * @param {Object} 
+      	 * @return {Array} Lista de todos los comentarios de ese producto
+       */
       product_comment_post: function(data) {
-        return $resource('/product/comment').save(data).$promise;
+        return $resource('/producto/comment').save(data).$promise;
       }
     };
   }
 ]);
+
+tolerantApp.factory('$user', [
+  '$resource', function($resource) {
+    return {
+
+      /*
+      	 * Petición de todos los items: productos, lugares y afecciones
+      	 * @namespace $items
+      	 * @restapi '/find/all'
+      	 * @param {null}
+      	 * @return {Array} Lista de todos los elementos ordenados por número de visitas
+       */
+      save_fav: function(data) {
+        return $resource('/users/:id/save_fav', {
+          id: '@id'
+        }, data);
+      }
+    };
+  }
+]);
+
+tolerantApp.factory('$shared', function() {
+  return {
+    finder: ''
+  };
+});

@@ -14,6 +14,7 @@ path 	= require 'path'
 favicon = require 'serve-favicon'
 logger 	= require 'morgan'
 colors  = require 'colors'
+compression     = require 'compression'
 cookieParser 	= require 'cookie-parser'
 bodyParser 		= require 'body-parser'
 
@@ -56,8 +57,9 @@ passport.serializeUser user.serializeUser()
 passport.deserializeUser user.deserializeUser()
 
 
+app.use(compression())
 # uncomment after placing your favicon in /public
-# app.use favicon "#{__dirname}/public/favicon.ico"
+app.use favicon(path.join(__dirname, 'public','favicon.ico'))
 app.use logger 'dev'
 # , { skip: (req, res)-> return res.statusCode < 400 }
 app.use bodyParser.json()
@@ -65,6 +67,7 @@ app.use bodyParser.urlencoded
   extended: false
 app.use cookieParser()
 app.use express.static path.join __dirname, 'public'
+
 
 # ROUTES
 home    = require './routes/index'
@@ -76,7 +79,7 @@ find    = require './routes/find'
 app.use '/',        home
 app.use '/account', account
 app.use '/users',   users
-app.use '/product', producto
+app.use '/producto', producto
 app.use '/find',    find
 
 

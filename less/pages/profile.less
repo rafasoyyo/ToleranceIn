@@ -1,7 +1,14 @@
 #profile-nav{
-	width: inherit;
+	// width: inherit;
 	position: fixed;
-	padding-right: 45px;
+	// padding-right: 45px;
+	@media screen and (max-width: @screen-sm-max){
+		position: relative;
+		margin-bottom: 20px;
+	}
+	@media screen and (min-width: @screen-lg){
+		margin-left: -90px;
+	}
 
 	.btn-group-vertical{
 		width: 100%;

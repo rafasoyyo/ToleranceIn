@@ -13,5 +13,7 @@
         .card__author
             img(ng-src="{{ item.picture || '/images/user.png' }}", alt='user')
             .card__author-content
-                span by 
-                a(href="'/user/profile/' + item.autor.username" ng-bind="item.autor.username")
+                div(ng-if="item.autor.username")
+                    span by 
+                        a(ng-if="item.autor.username != 'Anónimo'" href="/users/{{item.autor.username}}/profile" ng-bind="item.autor.username")
+                        span(ng-if="item.autor.username === 'Anónimo'" href="/users/{{item.autor.username}}/profile" ng-bind="item.autor.username")

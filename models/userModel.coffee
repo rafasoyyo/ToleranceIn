@@ -7,22 +7,21 @@ afeccion = require './afeccionModel'
 producto = require './productoModel'
 
 userSchema = new Schema({
-                        username    : { type : "string", unique : true, required: true}
-                        email       : { type : "string", unique : true, required: true}
-                        nombre      : { type : "string" }
-                        apellidos   : { type : "string" }
-                        ciudad      : { type : "string" }
-                        image       : { type : "string" }
-                        password    : { type : "string" }
+                        username    : { type : String, unique : true, required: true}
+                        email       : { type : String, unique : true, required: true}
+                        nombre      : { type : String }
+                        apellidos   : { type : String }
+                        ciudad      : { type : String }
+                        image       : { type : String }
+                        password    : { type : String }
+                        intereses   : [{ type : String }]
+                        rol         : { type : String , default: "user"}
                         lugares     : [{ type : Schema.ObjectId, ref: 'lugar'    }]
                         productos   : [{ type : Schema.ObjectId, ref: 'producto' }]
                         afecciones  : [{ type : Schema.ObjectId, ref: 'afeccion' }]
                         lugarFAV    : [{ type : Schema.ObjectId, ref: 'lugar'    }]
                         productoFAV : [{ type : Schema.ObjectId, ref: 'producto' }]
                         afeccionFAV : [{ type : Schema.ObjectId, ref: 'afeccion' }]
-                        rol         : { type : "string" , default: "user"}
-                        # dateEdition : { type : Date }
-                        # dateCreation: { type : Date, default: Date.now }
                 }, { timestamps: true, strict: false })
 
 

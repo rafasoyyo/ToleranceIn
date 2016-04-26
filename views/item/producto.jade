@@ -7,25 +7,34 @@ block header
 block content
     .container(ng-controller="item-Ctrl")
         .col-xs-12.col-md-4.pull-right
-            .pad-h-md.pad-v-xs.bg-info
-                .pad-xs
-                h4.bold.unmar.inline Autor:                
-                if item.autor.nombre != 'Anónimo'
-                    a.pad-xs.unmar.inline(href="/user/#{item.autor.nombre}") #{item.autor.nombre}
-                else
-                    .pad-xs.unmar.inline #{item.autor.nombre}
+            if user
+                #fav.pad-h-md.pad-v-lg.bg-info
+                    h4.bold.unmar.inline Favorito:
+                        i.fa.pad-h-sm(ng-click="save_fav('#{user.id}', '#{item._id}')", class="#{user.lugarFAV.indexOf(item._id)!=-1 || user.productoFAV.indexOf(item._id)!=-1 || user.afeccionFAV.indexOf(item._id)!=-1 ? 'fa-star' : 'fa-star-o' }")
+            
+            .pad-xs
+
+            .pad-h-md.pad-v-lg.bg-info
+                h4.bold.unmar.inline Autor:   
+                    .iblock.pad-h-sm               
+                        if item.autor.nombre != 'Anónimo'
+                            a.unmar.inline(href="/user/#{item.autor.nombre}") #{item.autor.nombre}
+                        else
+                            .unmar.inline #{item.autor.nombre}
 
         .col-xs-12.col-md-8
             .row
                 h4.bold.unmar Descipción:
                 p.pad-xs #{item.descripcion}
 
-            if item.etiquetas.length
+            if item.etiquetas.length > 0
+                p #{item.etiquetas.length}
                 .row.btn-bloch 
                     h4.bold.unmar Etiquetas:
                     each tag in item.etiquetas
-                        .iblock.pad-xs
-                            button.btn.btn-info #{tag}
+                        if tag,legth
+                            .iblock.pad-xs
+                                button.btn.btn-info #{tag}
             
             .pad-v-sm
             .row
@@ -49,7 +58,7 @@ block content
                     .text-center(ng-if="limited < comments.length")
                         .btn.btn-info.pad-h-md(ng-click="see_comment()") 
                             i.fa.fa-plus.txt-white.pad-h-xs
-                            span.txt-white See more
+                            span.txt-white Ver más
 
                 .pad-v-lg
 

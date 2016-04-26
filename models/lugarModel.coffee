@@ -4,18 +4,19 @@ comentarioSchema = require './commentModel'
 
 lugarSchema = new Schema({
                             # index     : { unique : true }
-                            clase       : { type : "string", default: "lugar" }
-                            nombre      : { type : "string", unique : true, required: true}
-                            descripcion : { type : "string" }
-                            direccion   : { type : "string" }
-                            telefono    : { type : "string" }
-                            web         : { type : "string" }
-                            especialidad: { type : "string" }
-                            tipo        : { type : "string" }
-                            image       : { type : "string" }
-                            etiquetas   : { type : "array"  , trim: true    }
-                            validado    : { type : "boolean", default: false}
-                            visitas     : { type : "number" , min: 0        }
+                            clase       : { type : String, default: "lugar" }
+                            nombre      : { type : String, unique : true, required: true}
+                            url         : { type : String, unique : true, required: true}
+                            descripcion : { type : String }
+                            direccion   : { type : String }
+                            telefono    : { type : String }
+                            web         : { type : String }
+                            especialidad: { type : String }
+                            tipo        : { type : String }
+                            image       : { type : String }
+                            etiquetas   : { type : Array  , trim: true    }
+                            validado    : { type : Boolean, default: false}
+                            visitas     : { type : Number , min: 0, default: 0 }
                             revisor     : { type : Schema.ObjectId, ref: 'user'}
                             autor       : { type : Schema.ObjectId, ref: 'user', default: '57042cdb9302bc86384b3f57'}
                             comentarios : [ comentarioSchema ]

@@ -17,16 +17,17 @@ comentarioSchema = require './commentModel'
 ###
 afeccionSchema = new Schema({
                             # index     : { unique : true }
-                            clase       : { type : "string", default: "afeccion" }
-                            nombre      : { type : "string", unique : true, required: true}
-                            descripcion : { type : "string" }
-                            sintomas    : { type : "string" }
-                            enlace      : { type : "string" }
-                            organismo   : { type : "string" }
-                            tipo        : { type : "string" }
-                            image       : { type : "string" }
-                            validado    : { type : "boolean", default: false}
-                            visitas     : { type : "number" , min: 0        }
+                            clase       : { type : String, default: "afeccion" }
+                            nombre      : { type : String, unique : true, required: true}
+                            url         : { type : String, unique : true, required: true}
+                            descripcion : { type : String }
+                            sintomas    : { type : String }
+                            enlace      : { type : String }
+                            organismo   : { type : String }
+                            tipo        : { type : String }
+                            image       : { type : String }
+                            validado    : { type : Boolean, default: false}
+                            visitas     : { type : Number , min: 0, default: 0 }
                             revisor     : { type : Schema.ObjectId, ref: 'user'}
                             autor       : { type : Schema.ObjectId, ref: 'user', default: '57042cdb9302bc86384b3f57'}
                             comentarios : [ comentarioSchema ]

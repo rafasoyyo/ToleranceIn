@@ -1,5 +1,5 @@
 
-tolerantApp.controller('item-Ctrl', ['$scope', '$filter', '$timeout', '$items', ($scope, $filter, $timeout, $items)->
+tolerantApp.controller('item-Ctrl', ['$scope', '$filter', '$timeout', '$user', '$items', ($scope, $filter, $timeout, $user, $items)->
 
 	# console.log $scope
 	
@@ -9,7 +9,7 @@ tolerantApp.controller('item-Ctrl', ['$scope', '$filter', '$timeout', '$items', 
 		$scope.limited = $scope.limited + iteartor
 	
 	$scope.get_comment = ->
-		if $scope.clase is 'product'
+		if $scope.clase is 'producto'
 			$items.product_comment_get($scope.ident).then( 
 														(res)-> $scope.comments = $filter('orderBy')(res.comentarios, 'created', true)
 													,
@@ -17,7 +17,7 @@ tolerantApp.controller('item-Ctrl', ['$scope', '$filter', '$timeout', '$items', 
 													)
 	
 	$scope.post_comment = ->
-		if $scope.clase is 'product'
+		if $scope.clase is 'producto'
 			$items.product_comment_post($scope.comment).then(
 								(res)-> 
 										console.log res
@@ -29,5 +29,17 @@ tolerantApp.controller('item-Ctrl', ['$scope', '$filter', '$timeout', '$items', 
 							)
 
 	$timeout( $scope.get_comment ,1)
+
+
+	$fav = angular.element('#fav').find('i')
+	$scope.save_fav = (id, data)->
+		$user.save_fav().save({id: id}, {item:data, clase: $scope.clase}).$promise.then(
+							(res)->
+									console.log res
+									if res.option is "removed" then return $fav.removeClass('fa-star').addClass('fa-star-o')
+									if res.option is "added" then return $fav.removeClass('fa-star-o').addClass('fa-star')
+						,
+							(err)-> console.error err
+						)
 
 ])

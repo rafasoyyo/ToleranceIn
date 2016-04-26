@@ -8,25 +8,28 @@ $(document).ready(->
 	if $body.hasClass('Home')
 		$ini = $('form#search')
 
-		finder = ->
-			$.post('/find', {search: $ini.find('input').val()} , (err, res)->
-				if err then return console.error err 
-				console.log res
-			)	
+		# finder = ->
+		# 	$.post('/find', {search: $ini.find('input').val()} , (err, res)->
+		# 		if err then return console.error err 
+		# 		console.log res
+		# 	)	
 		
-		$ini
-			.find('input')
-				.blur( finder )
-			.end()
-			.find('button')
-				.click( finder )
+		# $ini
+		# 	.find('input')
+		# 		.blur( finder )
+		# 	.end()
+		# 	.find('button')
+		# 		.click( finder )
 
 
 	if $body.hasClass('Produto') or $body.hasClass('Lugar') or $body.hasClass('Produto')
 		$ini = $('#item-header .item-info')
 
 
-	$ini_top = $ini.offset().top - 10
+	console.log $ini
+	if $ini and $ini.length > 0
+		$ini_top = $ini.offset().top - 10
+
 
 	responsive = ->
 		if $win.width() > 600
@@ -51,14 +54,12 @@ $(document).ready(->
 	$win.resize(responsive)
 
 
-
-
 	$formT = $('.form-tolerance')
-
-	if $formT.length
+	if $formT.length > 0
 		$formT.find('input, textarea')
 			.each ->
 				if $(@).val().length then $(@).addClass('filled') else $(@).removeClass('filled')
 			.blur ->
+				console.log '$(@).val().length' + $(@).val().length
 				if $(@).val().length then $(@).addClass('filled') else $(@).removeClass('filled')
 )

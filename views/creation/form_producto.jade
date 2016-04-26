@@ -4,7 +4,7 @@
     h1.h1.unmar Producto
     .pad-sm
 
-    form.form-tolerance(action="#{producto ? '/product/edit/' + producto.nombre : '/product' }" method="POST" enctype="multipart/form-data")
+    form.form-tolerance(action="#{producto ? '/producto/edit/' + producto.nombre : '/producto' }" method="POST" enctype="multipart/form-data")
 
         //- input.hidden(type="text" name="item" value="producto")
 
@@ -111,6 +111,12 @@
                     label(for="postres")
                         .logo_aliment.centrado.postres
                         .btn.btn-block.btn-default.square Postres
+
+                .pad-md.iblock.align-top
+                    input#verduras.hidden(type="radio" name="tipo" value="verduras" checked=(producto && producto.tipo.toLowerCase() === 'verduras'))
+                    label(for="verduras")
+                        .logo_aliment.centrado.verduras
+                        .btn.btn-block.btn-default.square Verduras
 
                 .pad-md.iblock.align-top
                     input#azucaradas.hidden(type="radio" name="tipo" value="azucaradas" checked=(producto && producto.tipo.toLowerCase() === 'azucaradas'))

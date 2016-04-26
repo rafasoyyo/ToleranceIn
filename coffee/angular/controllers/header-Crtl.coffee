@@ -6,7 +6,7 @@
 # @see rafa
 ###
 
-tolerantApp.controller('header-Ctrl', ['$scope', '$uibModal', ($scope, $uibModal)->
+tolerantApp.controller('header-Ctrl', ['$scope', '$uibModal', '$shared', ($scope, $uibModal, $shared)->
 
 	###
 	# Open login and register modal
@@ -24,5 +24,7 @@ tolerantApp.controller('header-Ctrl', ['$scope', '$uibModal', ($scope, $uibModal
 			windowClass : 'login-modal'
 			size: 'md'
 		})
+
+	$scope.$shared = $shared
 
 ])

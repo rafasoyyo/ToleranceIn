@@ -1,11 +1,14 @@
 
 router   = require('express').Router()
 moment   = require 'moment'
+lodash   = require 'lodash'
 user     = require '../models/userModel'
 producto = require '../models/productoModel'
 colors   = require 'colors'
 
 files = require '../utils/files'
+
+console.log 'files', files
 
 router.route '/'
     # RETURN JSON WITH ALL PRODUCTS
@@ -23,47 +26,54 @@ router.route '/'
             
 
     # SAVE PRODUCT
-    .post user.isAuthenticated , files.saveFile('./public/images/items').single('displayImage'), (req, res, next) ->
-
-        console.log req.file
+    .post user.isAuthenticated , files.saveFile('./public/images/items', 'displayImage'), (req, res, next) ->
 
         new_product = new producto({
+            url         : encodeURI(req.body.name)
             nombre      : req.body.name
             descripcion : req.body.description
             recomendado : req.body.recomended
             norecomendado: req.body.notrecomended
-            etiquetas   : req.body.tags.split(',') 
+            etiquetas   : lodash.compact(req.body.tags.split(',') )
             tipo        : req.body.tipo 
             image       : if req.file and req.file.path then req.file.path else null
         })
 
         if req.user 
-            new_product.autor = req.user_id
+            new_product.autor = req.user._id
             if req.user.rol isnt 'user' 
                 new_product.validado = true
                 new_product.revisor  = req.user_id
 
         new_product.save (err, product)->
-            if err then res.status(500).send( err.message)
+            if err
+                console.log err
+                return res.status(500).send( err.message)
             console.log '42' , product
-            res.redirect 'product/' + product.nombre
+            if req.user
+                user.findOneAndUpdate req.user._id , {$push: {"productos": product._id }}, (err, users)->
+                    res.redirect 'producto/' + product.url
+            else
+                    res.redirect 'producto/' + product.url
 
 
 
 router.route '/:slug'
     # SEE PRODUCT VIEW
     .get user.isAuthenticated , (req, res, next) ->
-
+        console.log req.params.slug
         producto.findOne  {nombre: req.params.slug} , (err, result)->
-            if err or not result then return res.status(500).end()
-
+            if err or not result 
+                console.log err
+                return res.status(500).send(err)
             # num_visita = if isNaN(result.visitas) then 1 else result.visitas + 1
             producto.findOneAndUpdate {_id: result._id } , {visitas: result.visitas + 1}, (err)->                  
                 if err then console.log colors.red(err) 
 
                 opts = [{ path: 'autor'}, { path: 'revisor'}, { path: 'comentarios.autor' }]            
                 producto.populate result, opts, (err, resp)->  
-                    if err then return res.status(500).end() 
+                    console.log resp
+                    if err then return res.status(500).send(err)
 
                     resp.comentarios = resp.comentarios.sort (a, b)->
                                                         r = new Date(a.created).getTime() - new Date(b.created).getTime()
@@ -72,7 +82,7 @@ router.route '/:slug'
                     # console.log colors.red(resp.comentarios)
                     res.render 'item/producto',
                         title   : resp.nombre + ' - ToleranceIn'
-                        pageName: 'Produto'
+                        pageName: 'Produto - ToleranceIn'
                         user    : req.user
                         item    : resp
 
@@ -81,7 +91,7 @@ router.route '/:slug'
 router.route '/edit/:slug'
     # EDIT PRODUCT VIEW
     .get user.isAuthenticated , (req, res, next) ->
-        producto.findOne {nombre: req.params.slug} , (err, product)->
+        producto.findOne {url: req.params.slug} , (err, product)->
             if err then return res.status(500).end()
             res.render 'producto/edit',
                 title   : 'Edit - ToleranceIn'
@@ -105,7 +115,7 @@ router.route '/edit/:slug'
 
         producto.findOneAndUpdate {nombre: req.body.name} , new_product, (err, product)->
             if err then res.status(500).send( err.message)
-            res.redirect 'product/' + product.nombre
+            res.redirect 'producto/' + product.nombre
 
 
 
