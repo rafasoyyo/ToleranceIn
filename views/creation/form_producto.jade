@@ -3,7 +3,6 @@
     
     h1.h1.unmar Producto
     .pad-sm
-
     form.form-tolerance(action="#{producto ? '/producto/edit/' + producto.nombre : '/producto' }" method="POST" enctype="multipart/form-data")
 
         //- input.hidden(type="text" name="item" value="producto")
@@ -16,7 +15,8 @@
 
                 .form-group
                     label(for='dsc') descripción
-                    textarea#dsc.form-control(type='text' name="description" rows="5" value="#{producto ? producto.descripcion : ''}")
+                    textarea#dsc.form-control(type='text' name="description" rows="5")
+                        | #{producto ? producto.descripcion : ''}
 
             .col-xs-12.col-md-3
                 .form-group
@@ -25,7 +25,7 @@
                         input#photo_producto.hidden(type="file" name="displayImage" onchange="previewImage(this,[256],0.5)")
                         .imagePreview
                             if producto && producto.image
-                                img(src="#{user.image}")
+                                img(src="#{producto.image}")
                             else
                                 span#no_image No hay imagen de perfil aún
                         label.btn.btn-default(for="photo_producto") Seleccionar imagen

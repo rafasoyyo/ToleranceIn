@@ -15,79 +15,151 @@ files = require '../utils/files'
 
 # PÁGINA CON TODOS LOS PRODUCTOS DEL USUARIO
 router.route '/:username/all'
-    .get user.isLogged, (req, res, next)-> 
-        finder.find_user_items req.user._id, (err, user_items)->
-            if err 
-                console.log err
-                res.status(400).json({error: err})
-
-            res.render 'profile/items',
-                title   : 'Items - ToleranceIn'
-                pageName: 'Items'
-                user    : req.user
-                items   : user_items
+    .get user.isLogged
+        , 
+            (req, res, next)-> 
+                if req.params.username is req.user.username
+                    finder.find_user_items req.user._id, (err, user_items)->
+                        if err then res.status(500).send(err)
+                        req.user.isowner = true
+                        req.send = 
+                                user : req.user
+                                items: user_items
+                        next()
+                else
+                    user.findOne {username: req.params.username}, (err, user_found)->
+                        if err then res.status(500).send(err)
+                        finder.find_user_items user_found._id, (err, user_items)->
+                            if err then res.status(500).send(err)
+                            req.send = 
+                                    user : user_found
+                                    items: user_items
+                            next()
+        ,
+            (req, res, next)->
+                res.render 'profile/items',
+                    title   : 'Items - ToleranceIn'
+                    pageName: 'Items'
+                    loggued : req.user
+                    user    : req.send.user
+                    items   : req.send.items
 
 
 # PÁGINA CON TODOS LOS FAVORITOS DEL USUARIO
 router.route '/:username/favorites'
-    .get user.isLogged, (req, res, next)-> 
-        finder.find_user_favs req.user._id, (err, user_favs)->
-            if err 
-                console.log err
-                res.status(400).json({error: err})
-
-            console.log user_favs
-            res.render 'profile/items',
-                title   : 'Favoritos - ToleranceIn'
-                pageName: 'Favoritos'
-                user    : req.user
-                items   : user_favs
+    .get user.isLogged
+        , 
+            (req, res, next)-> 
+                if req.params.username is req.user.username
+                    finder.find_user_favs req.user._id, (err, user_favs)->
+                        if err then res.status(500).send(err)
+                        req.user.isowner = true
+                        req.send = 
+                                user : req.user
+                                items: user_favs
+                        next()
+                else
+                    user.findOne {username: req.params.username}, (err, user_found)->
+                        if err then res.status(500).send(err)
+                        finder.find_user_favs user_found._id, (err, user_favs)->
+                            if err then res.status(500).send(err)
+                            req.send = 
+                                    user : user_found
+                                    items: user_favs
+                            next()
+        ,
+            (req, res, next)->
+                res.render 'profile/items',
+                    title   : 'Favoritos - ToleranceIn'
+                    pageName: 'Favoritos'
+                    loggued : req.user
+                    user    : req.send.user
+                    items   : req.send.items
 
 
 # PÁGINA CON TODOS LOS LUGARES DEL USUARIO
 router.route '/:username/places'
-    .get user.isLogged, (req, res, next)->         
-        # opts = [ { path: req.user,    options: { limit: 100 , sort: {'visitas': 1}} } ]
-        user.findById(req.user._id).populate('lugares').exec (err, user_products)->
-                if err 
-                    console.log err
-                    return res.status(400).json({error: err})
-
-                console.log req.user
-                console.log user_products.lugares
+    .get user.isLogged
+        , 
+            (req, res, next)->         
+                # opts = [ { path: req.user,    options: { limit: 100 , sort: {'visitas': 1}} } ]
+                if req.params.username is req.user.username
+                    user.findById(req.user._id).populate('lugares').exec (err, user_places)->
+                        if err then res.status(500).send(err)
+                        req.user.isowner = true
+                        req.send = 
+                                user : req.user
+                                items: user_places.lugares
+                        next()
+                else
+                    user.findOne({username: req.params.username}).populate('lugares').exec (err, user_places)->
+                        if err then res.status(500).send(err)
+                        req.send = 
+                                user : user_places
+                                items: user_places.lugares
+                        next()
+        ,
+            (req, res, next)->
                 res.render 'profile/items',
                     title   : 'Lugares - ToleranceIn'
                     pageName: 'Lugares'
-                    user    : req.user
-                    items   : user_products.lugares
+                    loggued : req.user
+                    user    : req.send.user
+                    items   : req.send.items
 
 
 # PÁGINA CON TODOS LOS PRODUCTOS DEL USUARIO
 router.route '/:username/products'
-    .get user.isLogged, (req, res, next)->         
-        # opts = [ { path: req.user,    options: { limit: 100 , sort: {'visitas': 1}} } ]
-        user.findById(req.user._id).populate('productos').exec (err, user_products)->
-                if err 
-                    console.log err
-                    return res.status(400).json({error: err})
-
-                console.log req.user
-                console.log user_products.productos
+    .get user.isLogged
+        ,
+            (req, res, next)->                
+                if req.params.username is req.user.username
+                    user.findById(req.user._id).populate('productos').exec (err, user_products)->
+                        if err then res.status(500).send(err)
+                        req.user.isowner = true
+                        req.send = 
+                                user : req.user
+                                items: user_products.productos
+                        next()
+                else
+                    user.findOne({username: req.params.username}).populate('productos').exec (err, user_products)->
+                        if err then res.status(500).send(err)
+                        req.send = 
+                                user : user_products
+                                items: user_products.productos
+                        next()
+        ,
+            (req, res, next)->    
                 res.render 'profile/items',
                     title   : 'Productos - ToleranceIn'
                     pageName: 'Productos'
-                    user    : req.user
-                    items   : user_products.productos
+                    loggued : req.user
+                    user    : req.send.user
+                    items   : req.send.items
 
 
 # PÁGINA CON FORMULARIO DE PERFIL DEL USUARIO
 router.route '/:username/profile'
 
-    .get user.isLogged, (req, res, next)-> 
-        res.render 'profile/perfil',
-            title   : 'Perfil - ToleranceIn'
-            pageName: 'Perfil'
-            user    : req.user
+    .get user.isLogged
+        , 
+            (req, res, next)-> 
+                if req.params.username is req.user.username
+                    req.user.isowner = true     
+                    res.render 'profile/perfil',
+                        title   : 'Perfil - ToleranceIn'
+                        pageName: 'Perfil'
+                        loggued : req.user
+                        user    : req.user
+                else
+                    user.findOne({username: req.params.username}, (err, user_found)->
+                        if err then res.status(500).send(err)     
+                        res.render 'profile/public_perfil',
+                            title   : 'Perfil - ToleranceIn'
+                            pageName: 'Perfil'
+                            loggued : req.user
+                            user    : user_found
+                    )
         
         
     .post user.isLogged, files.saveFile('./public/images/users', 'displayImage'), (req, res, next) ->

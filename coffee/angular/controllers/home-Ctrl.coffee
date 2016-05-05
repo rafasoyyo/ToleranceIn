@@ -19,7 +19,7 @@ tolerantApp.controller('home-Ctrl', ['$scope', '$items', '$shared', ($scope, $it
         if param
             $items.get_all().save(param).$promise.then(
                                     (res)-> 
-                                            console.log res
+                                            # console.log res
                                             $scope.all = res.all
                                             $scope.productos  = res.productos
                                             $scope.lugares    = res.lugares
@@ -31,7 +31,7 @@ tolerantApp.controller('home-Ctrl', ['$scope', '$items', '$shared', ($scope, $it
         if not param
             $items.get_all().get().$promise.then(
                                     (res)-> 
-                                            console.log res
+                                            # console.log res
                                             $scope.all = res.all
                                             $scope.productos  = res.productos
                                             $scope.lugares    = res.lugares
@@ -43,7 +43,7 @@ tolerantApp.controller('home-Ctrl', ['$scope', '$items', '$shared', ($scope, $it
 
     $scope.$shared = $shared
     $scope.$watchCollection('$shared', (end, ini)->
-        console.log end, ini 
+        # console.log end, ini 
         if end isnt ini then $scope.get_all(end)
     )
 

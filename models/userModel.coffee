@@ -15,7 +15,7 @@ userSchema = new Schema({
                         image       : { type : String }
                         password    : { type : String }
                         intereses   : [{ type : String }]
-                        rol         : { type : String , default: "user"}
+                        rol         : { type : String , default: "user", enum: ['user', 'admin', 'super']}
                         lugares     : [{ type : Schema.ObjectId, ref: 'lugar'    }]
                         productos   : [{ type : Schema.ObjectId, ref: 'producto' }]
                         afecciones  : [{ type : Schema.ObjectId, ref: 'afeccion' }]
@@ -44,6 +44,7 @@ userModel.isAuthenticated = (req, res, next)->
 
 # // route middleware to make sure a user is logged in
 userModel.isLogged = (req, res, next)->
+    console.log 'isAuthenticated', req.isAuthenticated()
     if req.isAuthenticated() then return next()
     res.redirect('/')
 

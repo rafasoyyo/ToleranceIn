@@ -1,6 +1,6 @@
 main(ng-controller="home-Ctrl")
 	.container
-		
+		div.hidden(ng-init='user = "#{user}"')
 		.col-xs-12.col-md-6.col-lg-4(ng-repeat="item in all")
 			div(ng-include="'../templates/cards.html'")
 

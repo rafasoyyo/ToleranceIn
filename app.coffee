@@ -18,6 +18,7 @@ compression     = require 'compression'
 cookieParser 	= require 'cookie-parser'
 bodyParser 		= require 'body-parser'
 
+config = require './config'
 # process.env.NODE_ENV = 'production';
 # mailer      = require './util/mailer'
 
@@ -27,7 +28,7 @@ app.locals.moment = require 'moment'
 
 # DB conection
 mongoose = require 'mongoose'
-mongoose.connect 'mongodb://localhost/tolerant'
+mongoose.connect config.mongodb
 
 
 # view engine setup
@@ -74,12 +75,14 @@ home    = require './routes/index'
 account = require './routes/account'
 users   = require './routes/users'
 producto= require './routes/producto'
+comercio= require './routes/comercio'
 find    = require './routes/find'
 
 app.use '/',        home
 app.use '/account', account
 app.use '/users',   users
-app.use '/producto', producto
+app.use '/producto',producto
+app.use '/comercio',comercio
 app.use '/find',    find
 
 
@@ -94,7 +97,7 @@ app.use (req, res, next) ->
 
 # development error handler
 # will print stacktrace
-console.log app.get('env')
+# console.log app.get('env')
 if app.get('env') is 'development'
     app.use (err, req, res, next) ->
         console.log err.status

@@ -8,8 +8,6 @@ colors   = require 'colors'
 
 files = require '../utils/files'
 
-console.log 'files', files
-
 router.route '/'
     # RETURN JSON WITH ALL PRODUCTS
     .get user.isAuthenticated , (req, res, next) ->
@@ -34,7 +32,7 @@ router.route '/'
             descripcion : req.body.description
             recomendado : req.body.recomended
             norecomendado: req.body.notrecomended
-            etiquetas   : lodash.compact(req.body.tags.split(',') )
+            etiquetas   : if req.body.tags then lodash.compact(req.body.tags.split(',') ) else null
             tipo        : req.body.tipo 
             image       : if req.file and req.file.path then req.file.path else null
         })
@@ -61,7 +59,7 @@ router.route '/'
 router.route '/:slug'
     # SEE PRODUCT VIEW
     .get user.isAuthenticated , (req, res, next) ->
-        console.log req.params.slug
+
         producto.findOne  {nombre: req.params.slug} , (err, result)->
             if err or not result 
                 console.log err
@@ -72,7 +70,7 @@ router.route '/:slug'
 
                 opts = [{ path: 'autor'}, { path: 'revisor'}, { path: 'comentarios.autor' }]            
                 producto.populate result, opts, (err, resp)->  
-                    console.log resp
+                    # console.log resp
                     if err then return res.status(500).send(err)
 
                     resp.comentarios = resp.comentarios.sort (a, b)->
@@ -80,7 +78,7 @@ router.route '/:slug'
                                                         return r < 0 ? true : false
 
                     # console.log colors.red(resp.comentarios)
-                    res.render 'item/producto',
+                    res.render 'item/item',
                         title   : resp.nombre + ' - ToleranceIn'
                         pageName: 'Produto - ToleranceIn'
                         user    : req.user
@@ -91,9 +89,10 @@ router.route '/:slug'
 router.route '/edit/:slug'
     # EDIT PRODUCT VIEW
     .get user.isAuthenticated , (req, res, next) ->
-        producto.findOne {url: req.params.slug} , (err, product)->
+        producto.findOne {nombre: req.params.slug} , (err, product)->
             if err then return res.status(500).end()
-            res.render 'producto/edit',
+
+            res.render 'item/producto_edit',
                 title   : 'Edit - ToleranceIn'
                 pageName: 'EditProduct'
                 user    : req.user
@@ -101,22 +100,19 @@ router.route '/edit/:slug'
 
 
     # PRODUCT CREATION
-    .post user.isAdmin, (req, res, next) -> 
+    .post user.isAdmin, files.saveFile('./public/images/items', 'displayImage'), (req, res, next) -> 
 
         new_product = 
-                    nombre      : req.body.name
                     descripcion : req.body.description
                     recomendado : req.body.recomended
                     norecomendado: req.body.notrecomended
-                    etiquetas   : req.body.tags.split(',') 
-                    tipo        : req.body.tipo 
+                    etiquetas   : if req.body.tags then lodash.compact(req.body.tags.split(',') ) else null
                     revisor     : req.user._id
-                    validado    : true
+                    validado    : if req.user.rol isnt user then true else false
 
-        producto.findOneAndUpdate {nombre: req.body.name} , new_product, (err, product)->
+        producto.findOneAndUpdate {nombre: req.params.slug} , new_product, (err, product)->
             if err then res.status(500).send( err.message)
-            res.redirect 'producto/' + product.nombre
-
+            res.redirect '/producto/' + req.params.slug
 
 
 router.route '/comment/:id'

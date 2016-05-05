@@ -13,7 +13,7 @@ files =
 
     # Create file on given folder and create folder if not exist
     saveFile : (directory, input_name, callback)->
-        console.log 'directory:-> ' , directory
+        # console.log 'directory:-> ' , directory
         multer({ 
                 storage: multer.diskStorage({
                             destination: (req, file, cb)->

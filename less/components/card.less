@@ -138,16 +138,22 @@
 }
 .share-toggle {
 	z-index: 2;
-	&:before {
-		color: @color2;
-		content: "\f1e0";
-		font-family: 'FontAwesome';
+	// &:before {
+	// 	color: @color2;
+	// 	content: "\f1e0";
+	// 	font-family: 'FontAwesome';
+	// }
+	position: relative;
+	.logo_tipo{
+	    position: relative;
+	    top: -26%;
+	    left: -26%;
 	}
 }
 .share-toggle.share-expanded {
-	&:before {
-		content: "\f00d";
-	}
+	// &:before {
+	// 	content: "\f00d";
+	// }
 }
 .share-icon {
 	background-color: @color1;
@@ -207,6 +213,7 @@
 	.card__author {
 		img {
 			width: 50px;
+			height: 50px;
 			border: 1px solid rgba(100, 100, 100, .5);
 		}
 	}

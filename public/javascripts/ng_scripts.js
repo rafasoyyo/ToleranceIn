@@ -68,7 +68,6 @@ tolerantApp.controller('home-Ctrl', [
     $scope.get_all = function(param) {
       if (param) {
         $items.get_all().save(param).$promise.then(function(res) {
-          console.log(res);
           $scope.all = res.all;
           $scope.productos = res.productos;
           $scope.lugares = res.lugares;
@@ -79,7 +78,6 @@ tolerantApp.controller('home-Ctrl', [
       }
       if (!param) {
         return $items.get_all().get().$promise.then(function(res) {
-          console.log(res);
           $scope.all = res.all;
           $scope.productos = res.productos;
           $scope.lugares = res.lugares;
@@ -92,7 +90,6 @@ tolerantApp.controller('home-Ctrl', [
     $scope.get_all();
     $scope.$shared = $shared;
     return $scope.$watchCollection('$shared', function(end, ini) {
-      console.log(end, ini);
       if (end !== ini) {
         return $scope.get_all(end);
       }
@@ -132,6 +129,7 @@ tolerantApp.controller('item-Ctrl', [
     $timeout($scope.get_comment, 1);
     $fav = angular.element('#fav').find('i');
     return $scope.save_fav = function(id, data) {
+      console.log(id, data, $scope.clase);
       return $user.save_fav().save({
         id: id
       }, {

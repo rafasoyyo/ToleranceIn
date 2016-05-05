@@ -4,7 +4,7 @@ comentarioSchema = require './commentModel'
 
 lugarSchema = new Schema({
                             # index     : { unique : true }
-                            clase       : { type : String, default: "lugar" }
+                            clase       : { type : String, default: "comercio" }
                             nombre      : { type : String, unique : true, required: true}
                             url         : { type : String, unique : true, required: true}
                             descripcion : { type : String }
@@ -18,7 +18,7 @@ lugarSchema = new Schema({
                             validado    : { type : Boolean, default: false}
                             visitas     : { type : Number , min: 0, default: 0 }
                             revisor     : { type : Schema.ObjectId, ref: 'user'}
-                            autor       : { type : Schema.ObjectId, ref: 'user', default: '57042cdb9302bc86384b3f57'}
+                            autor       : { type : Schema.ObjectId, ref: 'user', default: "571d3e6ce83b3f8f15ed61aa" }
                             comentarios : [ comentarioSchema ]
                 }, {timestamps: true})
 

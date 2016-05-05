@@ -1,17 +1,17 @@
 .card.radius.shadowDepth1.card-tolerance
     a(href="#{ '/' + item.clase +'/'+ item.nombre}")
         .card__image.border-tlr-radius
-            img.border-tlr-radius(src=" #{ item.picture ? item.picture : '/images/trigo.jpg' } ", alt='image')
+            img.border-tlr-radius(src=" #{ item.image ? item.image : '/images/trigo.jpg' } ", alt='image')
         .card__content.card__padding
             .card__share
-                #share.share-toggle.share-icon
+                .logo_tipo.small(class="#{item.clase}")
             .card__meta
                 h2 #{item.nombre}
             article.card__article
                 p #{item.description}
     .card__action
         .card__author
-            img(src="#{ item.picture ? item.picture : '/images/user.png' }", alt='user')
+            img(src="#{ item.autor.image || '/images/user.png' }", alt='user')
             .card__author-content
                 if item.autor && item.autor.username
                     span by 

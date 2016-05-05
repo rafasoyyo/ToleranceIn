@@ -33,6 +33,7 @@ tolerantApp.controller('item-Ctrl', ['$scope', '$filter', '$timeout', '$user', '
 
 	$fav = angular.element('#fav').find('i')
 	$scope.save_fav = (id, data)->
+		console.log id, data, $scope.clase
 		$user.save_fav().save({id: id}, {item:data, clase: $scope.clase}).$promise.then(
 							(res)->
 									console.log res

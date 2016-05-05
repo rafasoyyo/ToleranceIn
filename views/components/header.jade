@@ -13,7 +13,9 @@ header(ng-controller="header-Ctrl")
                 if !user
                     li(role="navigation")
                         button.btn.btn-brd-success.square.btn-lg(ng-click="loginModal()")  Acceder
-                else
-                    if pageName != 'Perfil'
-                        li(role="navigation")
+                if user && !user.isowner
+                    li(role="navigation")
+                        if loggued
+                            a.btn.btn-brd-success.square.btn-lg(href="/users/#{loggued.username}/profile")  Perfil
+                        else
                             a.btn.btn-brd-success.square.btn-lg(href="/users/#{user.username}/profile")  Perfil
