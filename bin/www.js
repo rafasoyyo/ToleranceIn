@@ -46,8 +46,7 @@ onListening = function() {
   return debug("Listening on " + bind);
 };
 
-port = process.env.port || '1337' || normalizePort(process.env.PORT);
-console.log(port)
+port = normalizePort(process.env.PORT) || '3000';
 
 app.set('port', port);
 

@@ -19,7 +19,7 @@ cookieParser 	= require 'cookie-parser'
 bodyParser 		= require 'body-parser'
 
 config = require './config'
-# console.log config
+console.log config
 # process.env.NODE_ENV = 'production';
 # mailer      = require './util/mailer'
 
