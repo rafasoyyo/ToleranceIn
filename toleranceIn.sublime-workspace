@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"re",
+				"require"
+			],
+			[
 				"parm",
 				"params"
 			],
@@ -14,10 +18,6 @@
 			[
 				"fin",
 				"findById"
-			],
-			[
-				"re",
-				"req	require"
 			],
 			[
 				"cos",
@@ -279,15 +279,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "/C/Pruebas/DicomReader/index.html",
-			"settings":
-			{
-				"buffer_size": 239,
-				"line_ending": "Windows",
-				"name": "index.html"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -347,48 +338,55 @@
 	"expanded_folders":
 	[
 		"/C/Pruebas/ToleranceIn",
-		"/C/Pruebas/ToleranceIn/coffee",
-		"/C/Pruebas/ToleranceIn/coffee/angular",
-		"/C/Pruebas/ToleranceIn/coffee/angular/controllers",
-		"/C/Pruebas/ToleranceIn/coffee/angular/factory",
-		"/C/Pruebas/ToleranceIn/less/bootstrap",
-		"/C/Pruebas/ToleranceIn/less/global",
-		"/C/Pruebas/ToleranceIn/less/pages",
-		"/C/Pruebas/ToleranceIn/public/javascripts",
-		"/C/Pruebas/ToleranceIn/public/templates",
-		"/C/Pruebas/ToleranceIn/views",
-		"/C/Pruebas/ToleranceIn/views/components",
-		"/C/Pruebas/ToleranceIn/views/creation",
-		"/C/Pruebas/ToleranceIn/views/home",
-		"/C/Pruebas/ToleranceIn/views/html",
-		"/C/Pruebas/ToleranceIn/views/item"
+		"/C/Pruebas/ToleranceIn/routes",
+		"/C/Pruebas/ToleranceIn/utils"
 	],
 	"file_history":
 	[
-		"/C/Pruebas/ToleranceIn/coffee/angular/controllers/item-Ctrl.coffee",
+		"/C/Pruebas/ty/package.json",
+		"/C/Pruebas/ToleranceIn/app.coffee",
+		"/C/Pruebas/ToleranceIn/routes/account.coffee",
+		"/C/Pruebas/ToleranceIn/config.json",
+		"/C/Pruebas/ToleranceIn/package.json",
+		"/C/Pruebas/ty/config/config.coffee",
+		"/C/Pruebas/ty/app.js",
+		"/C/Pruebas/ty/app/models/article.coffee",
+		"/C/Pruebas/ty/app/controllers/home.coffee",
+		"/C/Pruebas/ty/config/express.coffee",
+		"/C/Pruebas/ty/app/views/layout.jade",
+		"/C/Pruebas/ty/app/views/index.jade",
+		"/C/Pruebas/ty/app/views/error.jade",
+		"/C/Pruebas/ty/Gruntfile.js",
+		"/C/Pruebas/ToleranceIn/routes/comercio.coffee",
+		"/C/Pruebas/ToleranceIn/routes/producto.coffee",
+		"/C/Pruebas/ToleranceIn/utils/files.coffee",
+		"/C/Pruebas/ToleranceIn/views/item/lugar_edit.jade",
+		"/C/Pruebas/ToleranceIn/nodemon.jsn",
+		"/C/Pruebas/ToleranceIn/views/item/producto_edit.jade",
+		"/C/Pruebas/ToleranceIn/views/creation/form_comercio.jade",
+		"/C/Pruebas/ToleranceIn/views/creation/form_producto.jade",
+		"/C/Pruebas/ToleranceIn/config.js",
 		"/C/Pruebas/ToleranceIn/views/item/item.jade",
+		"/C/Pruebas/ToleranceIn/models/productoModel.coffee",
+		"/C/Pruebas/ToleranceIn/models/lugarModel.coffee",
+		"/C/Pruebas/ToleranceIn/views/item/header.jade",
+		"/C/Pruebas/ToleranceIn/less/components/logos.less",
+		"/C/Pruebas/DicomReader/index.html",
+		"/C/Pruebas/ToleranceIn/coffee/angular/controllers/item-Ctrl.coffee",
 		"/C/Pruebas/ToleranceIn/views/home/main.jade",
 		"/C/Pruebas/ToleranceIn/coffee/angular/controllers/home-Ctrl.coffee",
 		"/C/Pruebas/ToleranceIn/views/html/cards.jade",
-		"/C/Pruebas/ToleranceIn/views/creation/form_producto.jade",
-		"/C/Pruebas/ToleranceIn/routes/account.coffee",
 		"/C/Pruebas/ToleranceIn/views/creation/form_afeccion.jade",
 		"/C/Pruebas/ToleranceIn/views/profile/perfil.jade",
 		"/C/Pruebas/ToleranceIn/public/templates/cards.html",
 		"/C/Pruebas/ToleranceIn/coffee/angular/factory/factory.coffee",
 		"/C/Pruebas/ToleranceIn/coffee/angular/angular.coffee",
-		"/C/Pruebas/ToleranceIn/routes/producto.coffee",
-		"/C/Pruebas/ToleranceIn/views/creation/form_comercio.jade",
-		"/C/Pruebas/ToleranceIn/models/lugarModel.coffee",
 		"/C/Pruebas/ToleranceIn/routes/creation.coffee",
 		"/C/Pruebas/ToleranceIn/less/components/card.less",
-		"/C/Pruebas/ToleranceIn/views/item/lugar_edit.jade",
 		"/C/Pruebas/ToleranceIn/routes/lugar.coffee",
 		"/C/Pruebas/ToleranceIn/models/userModel.coffee",
 		"/C/Pruebas/ToleranceIn/routes/users.coffee",
 		"/C/Pruebas/ToleranceIn/less/global/miscellaneous.less",
-		"/C/Pruebas/ToleranceIn/less/components/logos.less",
-		"/C/Pruebas/ToleranceIn/models/productoModel.coffee",
 		"/C/Pruebas/ToleranceIn/views/components/cards.jade",
 		"/C/Pruebas/ToleranceIn/models/afeccionModel.coffee",
 		"/C/Pruebas/ToleranceIn/views/components/header.jade",
@@ -403,15 +401,11 @@
 		"/C/Pruebas/ToleranceIn/coffee/angular/controllers/header-Crtl.coffee",
 		"/C/Pruebas/ToleranceIn/views/home/content.jade",
 		"/C/Pruebas/ToleranceIn/less/pages/profile.less",
-		"/C/Pruebas/ToleranceIn/app.coffee",
 		"/C/Pruebas/ToleranceIn/views/profile/items.jade",
 		"/C/Pruebas/ToleranceIn/views/layout.jade",
-		"/C/Pruebas/ToleranceIn/package.json",
-		"/C/Pruebas/ToleranceIn/utils/files.coffee",
 		"/C/quibim/Precision/Frontend/sources/angular/factory/factory.coffee",
 		"/C/Pruebas/ToleranceIn/views/item/producto.jade",
 		"/C/Pruebas/ToleranceIn/routes/find.coffee",
-		"/C/Pruebas/ToleranceIn/views/item/header.jade",
 		"/C/Pruebas/ToleranceIn/models/commentModel.coffee",
 		"/C/Pruebas/ToleranceIn/utils/mailer.coffee",
 		"/C/Pruebas/ToleranceIn/coffee/angular/controllers/body-Ctrl.coffee",
@@ -433,7 +427,6 @@
 		"/C/Pruebas/ToleranceIn/node_modules/nodemon/package.json",
 		"/C/Pruebas/ToleranceIn/node_modules/nodemon/bin/nodemon.js",
 		"/C/Pruebas/ToleranceIn/views/profile/index.jade",
-		"/C/Pruebas/ToleranceIn/config.json",
 		"/C/Pruebas/azureAccount/routes/account.coffee",
 		"/C/Pruebas/azureAccount/models/userModel.coffee",
 		"/C/Pruebas/azureAccount/app.coffee",
@@ -477,22 +470,7 @@
 		"/C/Users/Rafael/Documents/GitHub/CursoNODE/TEMA8/ToDoAPI/routes/index.js",
 		"/C/Users/Rafael/Documents/GitHub/CursoNODE/TEMA8/ToDoAPI/routes/users.js",
 		"/C/Pruebas/ToleranceIn/views/home/index.jade",
-		"/C/Users/Rafael/Documents/GitHub/CursoNODE/TEMA5/ejercicio2/app.js",
-		"/C/Users/Rafael/Documents/GitHub/CursoNODE/TEMA5/ejercicio2/model/userModel.js",
-		"/C/Users/Rafael/Documents/GitHub/CursoNODE/TEMA5/ejercicio2/routes/users.js",
-		"/C/Users/Rafael/AppData/Local/Temp/Rar$DIa0.066/html5.image.preview.js",
-		"/C/Pruebas/ToleranceIn/public/javascripts/dropzone.js",
-		"/C/Pruebas/ToleranceIn/views/index.jade",
-		"/C/Pruebas/ToleranceIn/less/components/paddings.less",
-		"/C/Pruebas/Trials/routes/users.js",
-		"/C/Pruebas/Trials/routes/index.js",
-		"/C/Pruebas/Trials/model/tareaModel.js",
-		"/C/Pruebas/ToleranceIn/routes/searcher.coffee",
-		"/C/Pruebas/ToleranceIn/less/components/tabs.less",
-		"/C/Pruebas/ToleranceIn/less/bootstrap/buttons.less",
-		"/C/Pruebas/ToleranceIn/less/bootstrap/forms.less",
-		"/C/Users/Rafael/Documents/GitHub/CursoNODE/TEMA8/ToDoAPI/public/javascripts/main.js",
-		"/C/Users/Rafael/Documents/GitHub/CursoNODE/TEMA8/ToDoAPI/app.js"
+		"/C/Users/Rafael/Documents/GitHub/CursoNODE/TEMA5/ejercicio2/app.js"
 	],
 	"find":
 	{
@@ -547,6 +525,8 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"cons",
+			"lugar",
 			".pad-h-xs.iblock",
 			"item/producto",
 			"producto",
@@ -672,9 +652,7 @@
 			"data",
 			"xmlDropped",
 			"drop",
-			"biomarkers_create",
-			"biomarkers_create ",
-			"$filter"
+			"biomarkers_create"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -682,6 +660,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"Lugar",
 			".pad-h-sm.iblock",
 			"item/item",
 			"lugar",
@@ -729,97 +708,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "/C/Pruebas/DicomReader/index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 239,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								239,
-								239
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"auto_name": "index.html",
-							"bh_regions":
-							[
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content"
-							],
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],

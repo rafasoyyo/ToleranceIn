@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "coffee ./bin/www",
+    "start": "node ./bin/www.js",
     "mongo": "C:/MongoDB/Server/3.2/bin/mongod --dbpath C:/Pruebas/ToleranceIn/db",
     "nodemon": "nodemon -e coffee,jade",
     "docum": "crojsdoc README.md *.coffee ./routes/*.coffee ./utils/*.coffee ./models/*.coffee ./coffee/angular/**/*.coffee"

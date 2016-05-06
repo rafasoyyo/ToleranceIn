@@ -1,0 +1,60 @@
+
+var app, coffee, debug, http, normalizePort, onError, onListening, port, server;
+
+coffee = require('coffee-script').register();
+
+app = require('../app.coffee');
+
+debug = require('debug')('Tolerance-In:server');
+
+http = require('http');
+
+normalizePort = function(val) {
+  var port;
+  port = parseInt(val, 10);
+  if (isNaN(port)) {
+    val;
+  } else if (port >= 0) {
+    port;
+  }
+  return false;
+};
+
+onError = function(error) {
+  var bind;
+  if (error.syscall !== 'listen') {
+    throw error;
+  }
+  bind = typeof port === 'string' ? "Pipe " + port : "Port " + port;
+  switch (error.code) {
+    case 'EACCES':
+      console.error(bind + " requires elevated privileges");
+      return process.exit(1);
+    case 'EADDRINUSE':
+      console.error(bind + " is already in use");
+      return process.exit(1);
+    default:
+      throw error;
+  }
+};
+
+onListening = function() {
+  var addr, bind;
+  app.emit('listened', null);
+  addr = server.address();
+  bind = typeof addr === 'string' ? "pipe " + addr : "port " + addr.port;
+  return debug("Listening on " + bind);
+};
+
+port = normalizePort(process.env.PORT) || '3000';
+
+app.set('port', port);
+
+server = http.createServer(app);
+
+server.listen(port);
+
+server.on('error', onError);
+
+server.on('listening', onListening);
+
