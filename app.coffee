@@ -14,12 +14,16 @@ path 	= require 'path'
 favicon = require 'serve-favicon'
 logger 	= require 'morgan'
 colors  = require 'colors'
+glob    = require 'glob'
 compression     = require 'compression'
 cookieParser 	= require 'cookie-parser'
 bodyParser 		= require 'body-parser'
 
 config = require './config'
-console.log config
+mongodb= config.azure.mongodb
+console.log mongodb
+models = glob.sync(config.root + './models/*.coffee')
+models.forEach((model)-> require(model))
 # process.env.NODE_ENV = 'production';
 # mailer      = require './util/mailer'
 
@@ -29,7 +33,7 @@ app.locals.moment = require 'moment'
 
 # DB conection
 mongoose = require 'mongoose'
-mongoose.connect config.mongodb
+mongoose.connect mongodb
 
 
 # view engine setup
@@ -48,10 +52,10 @@ app.use(expressSession({
     resave: false,
     saveUninitialized: true,
     store : new MongoStore({
-                    url: 'mongodb://localhost/tolerant',
+                    mongooseConnection: mongoose.connection
                     ttl: 1 * 24 * 60 * 60  # = 1 days. Default 
                 })
-}));
+}))
 app.use passport.initialize()
 app.use passport.session()
 passport.use new LocalStrategy(user.authenticate())
@@ -117,6 +121,7 @@ app.use (err, req, res, next) ->
 
 app.once 'listened', ->
     db = mongoose.connection
+    # console.log db
     db.on('error', (err)->  colors.red('connection error: ' + err)      )
     db.once('open', (mdb)-> console.log colors.cyan("we're connected to: " + db.name + ", on port: " + port) )
 

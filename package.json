@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www.js",
+    "start": "node ./bin/www",
     "mongo": "C:/MongoDB/Server/3.2/bin/mongod --dbpath C:/Pruebas/ToleranceIn/db",
     "nodemon": "nodemon -e coffee,jade",
     "docum": "crojsdoc README.md *.coffee ./routes/*.coffee ./utils/*.coffee ./models/*.coffee ./coffee/angular/**/*.coffee"
@@ -20,6 +20,7 @@
     "express": "~4.11.1",
     "express-session": "^1.13.0",
     "express-static-cache": "0.0.6",
+    "glob": "^6.0.4",
     "jade": "~1.9.1",
     "lodash": "^4.8.2",
     "mkdirp": "^0.5.1",

@@ -1,6 +1,7 @@
-# !/usr/bin/env coffee
+#!/usr/bin/env coffee
 
 # Module dependencies.
+coffee = require('coffee-script').register();
 app = require '../app'
 debug = require('debug') 'Tolerance-In:server'
 http = require 'http'

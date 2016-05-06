@@ -1,56 +1,60 @@
-#!/usr/bin/env coffee
 
-# Module dependencies.
-app = require '../app'
-debug = require('debug') 'Tolerance-In:server'
-http = require 'http'
+var app, coffee, debug, http, normalizePort, onError, onListening, port, server;
 
-# Normalize a port into a number, string, or false.
-normalizePort = (val) ->
-  port = parseInt val, 10
+coffee = require('coffee-script').register();
 
-  # named pipe
-  if isNaN port
-    val
-  # port number
-  else if port >= 0
-    port
-  false
+app = require('../app.coffee');
 
-# Event listener for HTTP server "error" event.
-onError = (error) ->
-  if error.syscall isnt 'listen'
-    throw error
+debug = require('debug')('Tolerance-In:server');
 
-  bind = if typeof port is 'string' then "Pipe #{port}" else "Port #{port}"
+http = require('http');
 
-  # handle specific listen errors with friendly messages
-  switch error.code
-    when 'EACCES'
-      console.error "#{bind} requires elevated privileges"
-      process.exit 1
-    when 'EADDRINUSE'
-      console.error "#{bind} is already in use"
-      process.exit 1
-    else
-      throw error
+normalizePort = function(val) {
+  var port;
+  port = parseInt(val, 10);
+  if (isNaN(port)) {
+    val;
+  } else if (port >= 0) {
+    port;
+  }
+  return false;
+};
 
-# Event listener for HTTP server "listening" event.
-onListening = ->
-  app.emit 'listened', null
-  addr = server.address()
-  bind = if typeof addr is 'string' then "pipe #{addr}" else "port #{addr.port}"
-  debug "Listening on #{bind}"
+onError = function(error) {
+  var bind;
+  if (error.syscall !== 'listen') {
+    throw error;
+  }
+  bind = typeof port === 'string' ? "Pipe " + port : "Port " + port;
+  switch (error.code) {
+    case 'EACCES':
+      console.error(bind + " requires elevated privileges");
+      return process.exit(1);
+    case 'EADDRINUSE':
+      console.error(bind + " is already in use");
+      return process.exit(1);
+    default:
+      throw error;
+  }
+};
 
+onListening = function() {
+  var addr, bind;
+  app.emit('listened', null);
+  addr = server.address();
+  bind = typeof addr === 'string' ? "pipe " + addr : "port " + addr.port;
+  return debug("Listening on " + bind);
+};
 
-# Get port from environment and store in Express.
-port = normalizePort(process.env.PORT) or '3000'
-app.set 'port', port
+port = normalizePort(process.env.PORT) || '3000';
 
-# Create HTTP server.
-server = http.createServer app
+app.set('port', port);
 
-# Listen on provided port, on all network interfaces.
-server.listen port
-server.on 'error', onError
-server.on 'listening', onListening
+server = http.createServer(app);
+
+server.listen(port);
+
+server.on('error', onError);
+
+server.on('listening', onListening);
+
