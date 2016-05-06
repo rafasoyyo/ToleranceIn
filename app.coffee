@@ -48,7 +48,7 @@ app.use(expressSession({
     resave: false,
     saveUninitialized: true,
     store : new MongoStore({
-                    url: 'mongodb://localhost/tolerant',
+                    mongooseConnection: mongoose.connection,
                     ttl: 1 * 24 * 60 * 60  # = 1 days. Default 
                 })
 }));
@@ -113,7 +113,7 @@ app.use (err, req, res, next) ->
     res.status err.status or 500
     res.render 'error',
         message: err.message,
-        error: err
+        error: {}
 
 app.once 'listened', ->
     db = mongoose.connection
