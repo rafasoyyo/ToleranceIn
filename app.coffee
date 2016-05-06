@@ -112,7 +112,7 @@ app.use (err, req, res, next) ->
     res.status err.status or 500
     res.render 'error',
         message: err.message,
-        error: {}
+        error: err
 
 app.once 'listened', ->
     db = mongoose.connection
